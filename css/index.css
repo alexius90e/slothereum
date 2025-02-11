@@ -1,0 +1,99 @@
+html {
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  overflow-y: scroll;
+  color: #181d42;
+  background-color: #ffffff;
+}
+
+a,
+button,
+input,
+textarea {
+  font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+}
+
+figure {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.preloader {
+  max-height: 100dvh;
+  max-width: 100dvw;
+  overflow: hidden;
+}
+.preloader__wrapper {
+  max-height: 100dvh;
+  max-width: 100%;
+  width: 100%;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.preloader__content {
+  position: relative;
+  min-height: 500dvh;
+  max-width: 100%;
+}
+.preloader__video {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: block;
+  height: 100dvh;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  background: url(../assets/bg.jpg) center/cover no-repeat;
+  background-color: #222222;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  pointer-events: none;
+  -webkit-transition-property: opacity, -webkit-transform;
+  transition-property: opacity, -webkit-transform;
+  transition-property: opacity, transform;
+  transition-property: opacity, transform, -webkit-transform;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
+  -webkit-transition-duration: 0.8s;
+          transition-duration: 0.8s;
+  will-change: opacity, transform;
+}
+.screen.active {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  opacity: 1;
+  pointer-events: all;
+}
