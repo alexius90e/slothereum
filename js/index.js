@@ -14,10 +14,8 @@ if (preloaderWrapper && preloaderContent && preloaderVideo) {
     }%)`;
     preloaderVideo.style.transform = transformProp;
 
-    if (percentPosition >= 70) {
-      // const screenScalePercent = ((percentPosition - 90) / 10) * 100;
-
-      if (screen) screen.classList.add('active');
+    if (percentPosition >= 85 && screen) {
+      screen.classList.add('active');
     }
   });
 }

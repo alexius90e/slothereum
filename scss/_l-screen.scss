@@ -7,8 +7,7 @@
   z-index: 100;
   background: url(../assets/bg.jpg) center / cover no-repeat;
   background-color: #222222;
-  transform: scale(0);
-  // opacity: 0.5;
+  transform: scale(0) translate3d(100%, 100%, 0);
   pointer-events: none;
   transition-property: opacity, transform;
   transition-timing-function: ease-in-out;
@@ -16,8 +15,8 @@
   will-change: opacity, transform;
 
   &.active {
-    transform: scale(1);
+    transform: scale(1) translate3d(0, 0, 0);
     opacity: 1;
-    pointer-events: all;
+    // pointer-events: all;
   }
 }
