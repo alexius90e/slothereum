@@ -32,6 +32,10 @@ img {
   height: auto;
 }
 
+.hidden {
+  display: none !important;
+}
+
 .container {
   max-width: 1440px;
   width: 100%;
@@ -225,7 +229,7 @@ img {
   font-family: "IBM Plex Sans", sans-serif;
   font-weight: 500;
   font-size: 34px;
-  line-height: 98%;
+  line-height: 120%;
   color: #fff;
   text-align: center;
 }
@@ -263,7 +267,7 @@ img {
       -ms-flex-pack: center;
           justify-content: center;
   height: 100%;
-  width: 100%;
+  width: 0%;
   overflow: hidden;
   font-family: "IBM Plex Sans", sans-serif;
   font-weight: 700;
@@ -273,6 +277,126 @@ img {
   background-color: #2b6efd;
   -webkit-transition: width ease-in-out 0.1s;
   transition: width ease-in-out 0.1s;
+}
+.loading__progress.animated .loading__progress-bar {
   -webkit-animation: progressLoading 2.5s linear;
           animation: progressLoading 2.5s linear;
+}
+
+.auth {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 0 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-backdrop-filter: blur(50px);
+          backdrop-filter: blur(50px);
+  background: rgba(32, 32, 32, 0.4);
+}
+.auth__body {
+  max-width: 560px;
+  padding: 50px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 40px;
+  background: #181818;
+}
+.auth__title {
+  margin: 0 0 40px;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 120%;
+  color: #fff;
+  text-align: center;
+}
+.auth__method {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 20px;
+}
+.auth__method-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 100px;
+          flex: 0 0 100px;
+  gap: 10px;
+  -webkit-transition: -webkit-transform ease-in-out 0.2s;
+  transition: -webkit-transform ease-in-out 0.2s;
+  transition: transform ease-in-out 0.2s;
+  transition: transform ease-in-out 0.2s, -webkit-transform ease-in-out 0.2s;
+  will-change: transform;
+  cursor: pointer;
+}
+.auth__method-button:hover {
+  -webkit-transform: translateY(-8px);
+          transform: translateY(-8px);
+}
+.auth__method-button:active {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+.auth__method-button-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 75px;
+  height: 75px;
+  border-radius: 18px;
+  background-color: #282828;
+  pointer-events: none;
+}
+.auth__method-button-icon-image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.auth__method-button_tg .auth__method-button-icon {
+  background-image: linear-gradient(137deg, #100ee5 0%, #275ef7 99.62%);
+}
+.auth__method-button_gmail .auth__method-button-icon {
+  background-image: linear-gradient(135deg, #ffa9a7 0%, #ceffdb 99.62%);
+}
+.auth__method-button_email .auth__method-button-icon {
+  background-image: linear-gradient(140deg, #99ffb9 0%, #0aa30a 99.62%);
+}
+.auth__method-button-name {
+  display: inline-block;
+  padding: 2px 6px;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #fff;
+  border-radius: 2px;
+  background-color: rgba(0, 0, 0, 0.4);
+  pointer-events: none;
 }

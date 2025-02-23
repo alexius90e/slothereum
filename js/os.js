@@ -1,7 +1,29 @@
+const osSections = {
+  loading: 'loading',
+  auth: 'auth',
+};
+
+const showOsSection = (sectionClassName) => {
+  const section = document.querySelector(`.${sectionClassName}`);
+  if (section) section.classList.remove('hidden');
+};
+
+const hideOsSection = (sectionClassName) => {
+  const section = document.querySelector(`.${sectionClassName}`);
+  if (section) section.classList.add('hidden');
+};
+
 /// loading
 
+const loading = document.querySelector(`.${osSections.loading}`);
 const loadingProgress = document.querySelector('.loading__progress');
 const loadingProgressBar = document.querySelector('.loading__progress-bar');
+
+if (loading && loadingProgress) {
+  loading.addEventListener('mouseover', () => {
+    loadingProgress.classList.add('animated');
+  });
+}
 
 const updateProgressBar = () => {
   if (!loadingProgressBar || !loadingProgress) return;
@@ -11,16 +33,12 @@ const updateProgressBar = () => {
   loadingProgressBar.textContent = `${progress}%`;
 };
 
-const hideLoading = () => {
-  const loading = document.querySelector('.loading');
-  if (loading) loading.style.display = 'none';
-};
-
 if (loadingProgressBar) {
   const loadingIntervalId = setInterval(updateProgressBar, 100);
 
   loadingProgressBar.addEventListener('animationend', () => {
     clearInterval(loadingIntervalId);
-    hideLoading();
+    hideOsSection(osSections.loading);
+    showOsSection(osSections.auth);
   });
 }
