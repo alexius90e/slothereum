@@ -1,3 +1,5 @@
+import './os.js';
+
 const preloaderWrapper = document.querySelector('.preloader__wrapper');
 const preloaderContent = document.querySelector('.preloader__content');
 const preloaderVideo = document.querySelector('.preloader__video');
