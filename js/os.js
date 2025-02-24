@@ -229,79 +229,67 @@ osModals.forEach((modal) => {
   const close = modal.querySelector('.os-modal__header-close');
 
   let isDragging = false;
-  let currentX = 0;
-  let currentY = 0;
-  let initialX = 0;
-  let initialY = 0;
-  let xOffset = 0;
-  let yOffset = 0;
+  let startX = 0;
+  let startY = 0;
+  let translateX = 0;
+  let translateY = 0;
+  let currentX = window.innerWidth / 2;
+  let currentY = window.innerHeight / 2;
 
-  function closeModal() {
+  function hideModal() {
     modal.classList.add('hidden');
   }
 
-  header.addEventListener('mousedown', dragStart);
-  header.addEventListener('touchstart', dragStart);
+  function updatePosition() {
+    const rect = modalWindow.getBoundingClientRect();
+    const maxX = window.innerWidth - rect.width;
+    const maxY = window.innerHeight - rect.height;
 
-  document.addEventListener('mouseup', dragEnd);
-  document.addEventListener('touchend', dragEnd);
+    currentX = Math.max(0, Math.min(currentX, maxX));
+    currentY = Math.max(0, Math.min(currentY, maxY));
+
+    modalWindow.style.transform = `translate(${translateX}px, ${translateY}px)`;
+  }
+
+  header.addEventListener('mousedown', startDrag);
+  header.addEventListener('touchstart', startDrag, { passive: true });
+
+  document.addEventListener('mouseup', endDrag);
+  document.addEventListener('touchend', endDrag);
 
   document.addEventListener('mousemove', drag);
-  document.addEventListener('touchmove', drag);
+  document.addEventListener('touchmove', drag, { passive: false });
 
   modal.addEventListener('click', (event) => {
-    const isLayout = event.target === event.currentTarget;
+    const isOverlay = event.target === event.currentTarget;
     const isClose = event.target === close;
-    if (isLayout || isClose) closeModal();
+    if (isClose || isOverlay) hideModal();
   });
 
-  function dragStart(e) {
-    if (e.type === 'touchstart') {
-      initialX = e.touches[0].clientX - xOffset;
-      initialY = e.touches[0].clientY - yOffset;
-    } else {
-      initialX = e.clientX - xOffset;
-      initialY = e.clientY - yOffset;
-    }
-
+  function startDrag(e) {
     isDragging = true;
-    modalWindow.style.cursor = 'grabbing';
-    modalWindow.style.transition = 'none';
+
+    const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+    const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+
+    startX = clientX - translateX;
+    startY = clientY - translateY;
   }
 
   function drag(e) {
     if (!isDragging) return;
+    e.preventDefault();
 
-    if (e.type === 'touchmove') {
-      currentX = e.touches[0].clientX - initialX;
-      currentY = e.touches[0].clientY - initialY;
-    } else {
-      currentX = e.clientX - initialX;
-      currentY = e.clientY - initialY;
-    }
+    const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+    const clientY = e.touches ? e.touches[0].clientY : e.clientY;
 
-    xOffset = currentX;
-    yOffset = currentY;
+    translateX = clientX - startX;
+    translateY = clientY - startY;
 
-    setTranslate(currentX, currentY);
+    updatePosition();
   }
 
-  function dragEnd() {
-    initialX = currentX;
-    initialY = currentY;
+  function endDrag() {
     isDragging = false;
-    modalWindow.style.cursor = 'move';
-    modalWindow.style.transition = 'transform 0.3s';
-  }
-
-  function setTranslate(x, y) {
-    const rect = modalWindow.getBoundingClientRect();
-    const maxX = window.innerWidth;
-    const maxY = window.innerHeight;
-
-    x = Math.min(Math.max(x, -rect.left), maxX - rect.left);
-    y = Math.min(Math.max(y, -rect.top), maxY - rect.top);
-
-    modalWindow.style.transform = `translate(${x}px, ${y}px)`;
   }
 });

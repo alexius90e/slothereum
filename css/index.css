@@ -415,6 +415,8 @@ img {
   position: relative;
   padding: 10px 40px;
   background-color: rgba(0, 0, 0, 0.6);
+  cursor: -webkit-grab;
+  cursor: grab;
 }
 .os-modal__header-title {
   font-weight: 500;
