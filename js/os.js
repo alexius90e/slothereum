@@ -220,3 +220,88 @@ osMainApps.forEach((osMainApp) => {
     console.log('osModal');
   });
 });
+
+const osModals = document.querySelectorAll('.os-modal');
+
+osModals.forEach((modal) => {
+  const modalWindow = modal.querySelector('.os-modal__body');
+  const header = modal.querySelector('.os-modal__header');
+  const close = modal.querySelector('.os-modal__header-close');
+
+  let isDragging = false;
+  let currentX = 0;
+  let currentY = 0;
+  let initialX = 0;
+  let initialY = 0;
+  let xOffset = 0;
+  let yOffset = 0;
+
+  function closeModal() {
+    modal.classList.add('hidden');
+  }
+
+  header.addEventListener('mousedown', dragStart);
+  header.addEventListener('touchstart', dragStart);
+
+  document.addEventListener('mouseup', dragEnd);
+  document.addEventListener('touchend', dragEnd);
+
+  document.addEventListener('mousemove', drag);
+  document.addEventListener('touchmove', drag);
+
+  modal.addEventListener('click', (event) => {
+    const isLayout = event.target === event.currentTarget;
+    const isClose = event.target === close;
+    if (isLayout || isClose) closeModal();
+  });
+
+  function dragStart(e) {
+    if (e.type === 'touchstart') {
+      initialX = e.touches[0].clientX - xOffset;
+      initialY = e.touches[0].clientY - yOffset;
+    } else {
+      initialX = e.clientX - xOffset;
+      initialY = e.clientY - yOffset;
+    }
+
+    isDragging = true;
+    modalWindow.style.cursor = 'grabbing';
+    modalWindow.style.transition = 'none';
+  }
+
+  function drag(e) {
+    if (!isDragging) return;
+
+    if (e.type === 'touchmove') {
+      currentX = e.touches[0].clientX - initialX;
+      currentY = e.touches[0].clientY - initialY;
+    } else {
+      currentX = e.clientX - initialX;
+      currentY = e.clientY - initialY;
+    }
+
+    xOffset = currentX;
+    yOffset = currentY;
+
+    setTranslate(currentX, currentY);
+  }
+
+  function dragEnd() {
+    initialX = currentX;
+    initialY = currentY;
+    isDragging = false;
+    modalWindow.style.cursor = 'move';
+    modalWindow.style.transition = 'transform 0.3s';
+  }
+
+  function setTranslate(x, y) {
+    const rect = modalWindow.getBoundingClientRect();
+    const maxX = window.innerWidth;
+    const maxY = window.innerHeight;
+
+    x = Math.min(Math.max(x, -rect.left), maxX - rect.left);
+    y = Math.min(Math.max(y, -rect.top), maxY - rect.top);
+
+    modalWindow.style.transform = `translate(${x}px, ${y}px)`;
+  }
+});
