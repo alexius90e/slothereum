@@ -122,6 +122,258 @@ img {
   width: 100%;
   background: url(../assets/bg.jpg) center/cover no-repeat;
 }
+.os__container {
+  display: block;
+  max-width: 1620px;
+  margin: 0 auto;
+  padding: 0 50px;
+}
+.os__main-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: calc(100dvh - 80px);
+  padding-bottom: calc((100dvh - 80px) * 0.1);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.os__main-apps {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 20px 5px;
+  max-width: 490px;
+  width: 100%;
+}
+.os__main-app {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 160px;
+          flex: 0 0 160px;
+  gap: 10px;
+  -webkit-transition: -webkit-transform ease-in-out 0.1s;
+  transition: -webkit-transform ease-in-out 0.1s;
+  transition: transform ease-in-out 0.1s;
+  transition: transform ease-in-out 0.1s, -webkit-transform ease-in-out 0.1s;
+  cursor: pointer;
+}
+.os__main-app.disabled {
+  opacity: 0.2;
+  pointer-events: none;
+  cursor: auto;
+}
+.os__main-app:hover:not(.disabled) {
+  -webkit-transform: translateY(-4px);
+          transform: translateY(-4px);
+}
+.os__main-app-icon {
+  display: block;
+  width: 75px;
+  height: 75px;
+  border-radius: 18px;
+  overflow: hidden;
+  background-color: #ffffff;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  pointer-events: none;
+}
+.os__main-app-icon:has(.os__main-app-icon-image) {
+  background-color: rgba(255, 255, 255, 0);
+}
+.os__main-app-icon-image {
+  display: block;
+  max-width: 100%;
+  width: 100%;
+  aspect-ratio: 1/1;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-user-select: inherit;
+     -moz-user-select: inherit;
+      -ms-user-select: inherit;
+          user-select: inherit;
+  pointer-events: inherit;
+}
+.os__main-app-text {
+  display: block;
+  max-width: 160px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 2px 6px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow: hidden;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #fff;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  border-radius: 2px;
+  background-color: rgba(0, 0, 0, 0.4);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  pointer-events: none;
+}
+.os__footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 13px 0;
+  -webkit-backdrop-filter: blur(30px);
+          backdrop-filter: blur(30px);
+  background: rgba(70, 70, 70, 0.6);
+}
+.os__footer-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.os__footer-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+}
+.os__footer-info-os {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  color: #fff;
+}
+.os__footer-info-social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.os__footer-info-social-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 34px;
+  height: 34px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  border-radius: 12px;
+}
+.os__footer-info-social-link_x {
+  background-color: #282828;
+}
+.os__footer-info-social-link_tg {
+  background-image: linear-gradient(135deg, #0b00e2 0%, #3184ff 100%);
+}
+.os__footer-info-social-link-image {
+  display: block;
+  max-width: 100%;
+  width: 20px;
+  height: auto;
+}
+.os__footer-controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  gap: 20px;
+}
+.os__footer-controls-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+}
+.os__footer-controls-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  padding: 0;
+  border: none;
+  outline: none;
+  background-color: rgba(0, 0, 0, 0);
+  cursor: pointer;
+}
+.os__footer-controls-button-image {
+  display: block;
+  max-width: 100%;
+  width: 24px;
+  height: auto;
+}
+.os__footer-controls-time {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  letter-spacing: 0.02em;
+  text-align: right;
+  color: #fff;
+}
 
 .os-body {
   position: fixed;

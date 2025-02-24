@@ -5,6 +5,8 @@ const osSections = {
   authCodeRef: 'auth-code_referral',
   authCodeEmail: 'auth-code_email',
   swipeLogin: 'swipe-login',
+  os: 'os',
+  osModal: 'os-modal',
 };
 
 const showOsSection = (sectionClassName) => {
@@ -189,6 +191,32 @@ swipeLoginSliders.forEach((slider) => {
     document.removeEventListener('touchmove', drag);
     document.removeEventListener('contextmenu', (event) => event.preventDefault());
     document.body.style.userSelect = '';
-    hideOsSection(osSections.swipeLogin)
+    hideOsSection(osSections.swipeLogin);
+    showOsSection(osSections.os);
   }
+});
+
+/// os
+
+const osTimeEl = document.querySelector('.os__footer-controls-time');
+
+function updateOsTime() {
+  const timeFormatter = new Intl.DateTimeFormat('en-US', {
+    hour: 'numeric',
+    minute: '2-digit',
+  });
+  const currentTime = timeFormatter.format(new Date());
+  if (osTimeEl) osTimeEl.textContent = currentTime;
+}
+
+updateOsTime();
+if (osTimeEl) setInterval(() => updateOsTime(), 10000);
+
+const osMainApps = document.querySelectorAll('.os__main-app');
+
+osMainApps.forEach((osMainApp) => {
+  osMainApp.addEventListener('click', (event) => {
+    showOsSection(osSections.osModal);
+    console.log('osModal');
+  });
 });
