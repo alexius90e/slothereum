@@ -16,7 +16,7 @@
 
     <main class="main">
       <div class="os-body">
-        <section class="loading ">
+        <section class="loading">
           <div class="loading__body">
             <div class="loading__title">loading OS</div>
             <div class="loading__progress">
@@ -73,6 +73,139 @@
                 </div>
                 <div class="auth__method-button-name">E-mail</div>
               </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="auth-code auth-code_referral hidden">
+          <div class="auth-code__body">
+            <div class="auth-code__title">Write your referral code</div>
+            <div class="auth-code__description">
+              Registration is not possible without a referral code.
+            </div>
+
+            <div class="auth-code__code">
+              <input
+                class="auth-code__code-input"
+                id="authCodeRef1"
+                type="text"
+                maxlength="1"
+                autocomplete="off"
+                required
+              />
+              <input
+                class="auth-code__code-input"
+                id="authCodeRef2"
+                type="text"
+                maxlength="1"
+                autocomplete="off"
+                required
+              />
+              <input
+                class="auth-code__code-input"
+                id="authCodeRef3"
+                type="text"
+                maxlength="1"
+                autocomplete="off"
+                required
+              />
+              <input
+                class="auth-code__code-input"
+                id="authCodeRef4"
+                type="text"
+                maxlength="1"
+                autocomplete="off"
+                required
+              />
+              <input
+                class="auth-code__code-input"
+                id="authCodeRef5"
+                type="text"
+                maxlength="1"
+                autocomplete="off"
+                required
+              />
+              <input
+                class="auth-code__code-input"
+                id="authCodeRef6"
+                type="text"
+                maxlength="1"
+                autocomplete="off"
+                required
+              />
+            </div>
+
+            <div class="auth-code__continue">
+              <button class="auth-code__continue-button" disabled>Continue</button>
+            </div>
+          </div>
+        </section>
+
+        <section class="auth-code auth-code_email hidden">
+          <div class="auth-code__body">
+            <div class="auth-code__title">We sent you a code</div>
+            <div class="auth-code__description">
+              Enter the 6 digit code sent to your@email.com
+            </div>
+
+            <div class="auth-code__code">
+              <input
+                class="auth-code__code-input"
+                id="authCodeEmail1"
+                type="text"
+                maxlength="1"
+                autocomplete="off"
+                required
+              />
+              <input
+                class="auth-code__code-input"
+                id="authCodeEmail2"
+                type="text"
+                maxlength="1"
+                autocomplete="off"
+                required
+              />
+              <input
+                class="auth-code__code-input"
+                id="authCodeEmail3"
+                type="text"
+                maxlength="1"
+                autocomplete="off"
+                required
+              />
+              <input
+                class="auth-code__code-input"
+                id="authCodeEmail4"
+                type="text"
+                maxlength="1"
+                autocomplete="off"
+                required
+              />
+              <input
+                class="auth-code__code-input"
+                id="authCodeEmail5"
+                type="text"
+                maxlength="1"
+                autocomplete="off"
+                required
+              />
+              <input
+                class="auth-code__code-input"
+                id="authCodeEmail6"
+                type="text"
+                maxlength="1"
+                autocomplete="off"
+                required
+              />
+            </div>
+
+            <div class="auth-code__description">
+              Didn’t get an email?
+              <button class="auth-code__description-resend">Resend code</button>
+            </div>
+
+            <div class="auth-code__continue">
+              <button class="auth-code__continue-button" disabled>Continue</button>
             </div>
           </div>
         </section>

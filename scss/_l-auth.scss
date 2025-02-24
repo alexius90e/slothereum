@@ -7,7 +7,7 @@
   padding: 0 20px;
   box-sizing: border-box;
   backdrop-filter: blur(50px);
-  background: rgba(32, 32, 32, 0.4);
+  background-color: rgba($color: #000000, $alpha: 0.4);
 
   &__body {
     max-width: 560px;
