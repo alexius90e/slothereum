@@ -248,6 +248,16 @@ osModals.forEach((modal) => {
     currentX = Math.max(0, Math.min(currentX, maxX));
     currentY = Math.max(0, Math.min(currentY, maxY));
 
+    const minTranslateX = -(window.innerWidth - rect.width) / 2 - rect.width * 0.75;
+    const maxTranslateX = rect.width + (window.innerHeight - rect.height) / 2 - rect.width * 0.1;
+    const minTranslateY = -(window.innerHeight - rect.height) / 2;
+    const maxTranslateY = rect.height + (window.innerHeight - rect.height) / 2 - 36;
+
+    if (translateX < minTranslateX) translateX = minTranslateX;
+    if (translateX > maxTranslateX) translateX = maxTranslateX;
+    if (translateY < minTranslateY) translateY = minTranslateY;
+    if (translateY > maxTranslateY) translateY = maxTranslateY;
+
     modalWindow.style.transform = `translate(${translateX}px, ${translateY}px)`;
   }
 
@@ -292,4 +302,8 @@ osModals.forEach((modal) => {
   function endDrag() {
     isDragging = false;
   }
+
+  window.addEventListener('resize', (event) => {
+    updatePosition();
+  });
 });
