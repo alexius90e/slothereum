@@ -5,14 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Slothereum</title>
     <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./css/index.css" />
+    <script src="./js/swiper-bundle.min.js" defer></script>
     <script type="module" src="./js/index.js" defer></script>
   </head>
 
   <body>
     <header class="header">
       <div class="container">
-        <div class="header__content">
+        <div class="header__wrapper">
           <div class="header__logo">
             <a class="header__logo-link" href="">
               <img class="header__logo-link-image" src="./assets/character-head.png" alt="logo" />
@@ -42,6 +44,90 @@
               <source src="./assets/slothereum-video.webm" type="video/webm" />
               <source src="./assets/slothereum-video.mp4" type="video/mp4" />
             </video>
+          </div>
+        </div>
+      </section>
+
+      <section class="menu-sliders" id="menuSliders">
+        <div class="container">
+          <div class="menu-sliders__main">
+            <div class="swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide menu-sliders__main-slide">
+                  <img class="menu-sliders__main-slide-image" src="./assets/concierge.png" />
+                </div>
+                <div class="swiper-slide menu-sliders__main-slide">
+                  <img class="menu-sliders__main-slide-image" src="./assets/slo.png" />
+                </div>
+                <div class="swiper-slide menu-sliders__main-slide">
+                  <img class="menu-sliders__main-slide-image" src="./assets/trading terminal.png" />
+                </div>
+                <div class="swiper-slide menu-sliders__main-slide">
+                  <img class="menu-sliders__main-slide-image" src="./assets/concierge.png" />
+                </div>
+                <div class="swiper-slide menu-sliders__main-slide">
+                  <img class="menu-sliders__main-slide-image" src="./assets/slo.png" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-sliders__thumbs" thumbsSlider="">
+            <div class="swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"></div>
+
+                <div class="swiper-slide">
+                  <div class="menu-sliders__thumbs-slide">
+                    <div class="menu-sliders__thumbs-slide-title">SLOTHEREUM OS</div>
+                    <div class="menu-sliders__thumbs-slide-description">
+                      Be First. Slothereum OS - new way to interact with meme tokens.
+                    </div>
+                    <div class="menu-sliders__thumbs-slide-login">
+                      <div class="slide-to-unlock">
+                        <div class="slide-to-unlock__draggable"></div>
+                        <div class="slide-to-unlock__track"></div>
+                        <div class="slide-to-unlock__text">Slide to unlock</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="menu-sliders__thumbs-slide">
+                    <div class="menu-sliders__thumbs-slide-title">TRADING TERMINAL</div>
+                    <div class="menu-sliders__thumbs-slide-description">
+                      Be First. Slothereum OS - new way to interact with meme tokens.
+                    </div>
+                    <div class="menu-sliders__thumbs-slide-login">
+                      <div class="slide-to-unlock">
+                        <div class="slide-to-unlock__draggable"></div>
+                        <div class="slide-to-unlock__track"></div>
+                        <div class="slide-to-unlock__text">Slide to unlock</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="menu-sliders__thumbs-slide">
+                    <div class="menu-sliders__thumbs-slide-title">CRYPTO CONCIERGE</div>
+                    <div class="menu-sliders__thumbs-slide-description">
+                      Be First. Slothereum OS - new way to interact with meme tokens.
+                    </div>
+                    <div class="menu-sliders__thumbs-slide-login">
+                      <div class="slide-to-unlock">
+                        <div class="slide-to-unlock__draggable"></div>
+                        <div class="slide-to-unlock__track"></div>
+                        <div class="slide-to-unlock__text">Slide to unlock</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide"></div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

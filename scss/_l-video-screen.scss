@@ -13,15 +13,10 @@
 
   &__content {
     position: relative;
-    min-height: calc(100dvh * 5);
     max-width: 100%;
   }
 
   &__video {
-    position: sticky;
-    top: 0;
-    left: 0;
-    right: 0;
     display: block;
     height: 100dvh;
     width: 100%;

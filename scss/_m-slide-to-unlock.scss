@@ -1,0 +1,65 @@
+.slide-to-unlock {
+  position: relative;
+  display: block;
+  max-width: 100%;
+  width: 300px;
+  height: 60px;
+  overflow: hidden;
+  border-radius: 60px;
+  background-color: #181818;
+
+  &__track {
+    position: absolute;
+    width: 0;
+    height: 100%;
+    border-radius: inherit;
+    background-image: linear-gradient(315deg, #a252ff 0%, #4685ff 100%);
+  }
+
+  &__draggable {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 10;
+    display: block;
+    width: 60px;
+    height: 60px;
+    padding: 10px;
+    border-radius: inherit;
+    box-sizing: border-box;
+    cursor: grab;
+
+    &:before {
+      content: '';
+      display: block;
+      height: 100%;
+      box-sizing: border-box;
+      aspect-ratio: 1 / 1;
+      border-radius: inherit;
+      background: url(../assets/chevron_right.svg) center / 24px no-repeat;
+      background-color: #ffffff;
+    }
+
+    &:active {
+      cursor: grabbing;
+    }
+  }
+
+  &__text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 100%;
+    background: linear-gradient(333deg, #d796ff 0%, #649dff 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    user-select: none;
+  }
+}

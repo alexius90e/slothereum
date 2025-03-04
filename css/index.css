@@ -50,6 +50,80 @@ img {
           box-sizing: border-box;
 }
 
+.slide-to-unlock {
+  position: relative;
+  display: block;
+  max-width: 100%;
+  width: 300px;
+  height: 60px;
+  overflow: hidden;
+  border-radius: 60px;
+  background-color: #181818;
+}
+.slide-to-unlock__track {
+  position: absolute;
+  width: 0;
+  height: 100%;
+  border-radius: inherit;
+  background-image: linear-gradient(315deg, #a252ff 0%, #4685ff 100%);
+}
+.slide-to-unlock__draggable {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 10;
+  display: block;
+  width: 60px;
+  height: 60px;
+  padding: 10px;
+  border-radius: inherit;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+.slide-to-unlock__draggable:before {
+  content: "";
+  display: block;
+  height: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  aspect-ratio: 1/1;
+  border-radius: inherit;
+  background: url(../assets/chevron_right.svg) center/24px no-repeat;
+  background-color: #ffffff;
+}
+.slide-to-unlock__draggable:active {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+.slide-to-unlock__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 100%;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 100%;
+  background: linear-gradient(333deg, #d796ff 0%, #649dff 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
 .header {
   position: fixed;
   top: 0;
@@ -61,7 +135,7 @@ img {
           backdrop-filter: blur(30px);
   background: rgba(18, 18, 19, 0.5);
 }
-.header__content {
+.header__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1095,17 +1169,167 @@ img {
 }
 .video-screen__content {
   position: relative;
-  min-height: 500dvh;
   max-width: 100%;
 }
 .video-screen__video {
-  position: sticky;
-  top: 0;
-  left: 0;
-  right: 0;
   display: block;
   height: 100dvh;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.menu-sliders {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100dvh;
+  padding: 120px 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow: hidden;
+}
+.menu-sliders::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  display: block;
+  max-width: 85%;
+  max-height: 40%;
+  width: 900px;
+  aspect-ratio: 92/39;
+  border-radius: 400px;
+  background-color: #1450ff;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+          transform: translate3d(-50%, -50%, 0);
+  -webkit-filter: blur(250px);
+          filter: blur(250px);
+}
+.menu-sliders::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 11;
+  display: block;
+  color: rgba(18, 18, 19, 0);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(18, 18, 19, 0)), color-stop(30%, #121213));
+  background: linear-gradient(180deg, rgba(18, 18, 19, 0) 0%, #121213 30%);
+  pointer-events: none;
+}
+.menu-sliders__main {
+  position: relative;
+  z-index: 10;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.menu-sliders__main .swiper {
+  overflow: visible;
+}
+.menu-sliders__main .swiper-wrapper {
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+.menu-sliders__main-slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-height: 480px;
+  height: auto;
+  opacity: 0;
+}
+.menu-sliders__main-slide.swiper-slide-active {
+  position: relative;
+  z-index: 100;
+  width: 54% !important;
+  opacity: 1;
+}
+.menu-sliders__main-slide.swiper-slide-prev, .menu-sliders__main-slide.swiper-slide-next {
+  position: relative;
+  width: 23% !important;
+  overflow: hidden;
+  opacity: 1;
+}
+.menu-sliders__main-slide.swiper-slide-prev {
+  -webkit-transform: translateX(20px);
+          transform: translateX(20px);
+}
+.menu-sliders__main-slide.swiper-slide-next {
+  -webkit-transform: translateX(-20px);
+          transform: translateX(-20px);
+}
+.menu-sliders__main-slide-image {
+  display: block;
+  min-width: 100%;
+  height: auto;
+  -webkit-transition: min-width ease-in-out 0.28s;
+  transition: min-width ease-in-out 0.28s;
+}
+.menu-sliders__main-slide.swiper-slide-prev .menu-sliders__main-slide-image, .menu-sliders__main-slide.swiper-slide-next .menu-sliders__main-slide-image {
+  min-width: 154%;
+}
+.menu-sliders__main-slide.swiper-slide-prev .menu-sliders__main-slide-image {
+  -webkit-transform: translateX(17.5%);
+          transform: translateX(17.5%);
+}
+.menu-sliders__main-slide.swiper-slide-next .menu-sliders__main-slide-image {
+  -webkit-transform: translateX(-17.5%);
+          transform: translateX(-17.5%);
+}
+.menu-sliders__thumbs {
+  position: relative;
+  z-index: 20;
+}
+.menu-sliders__thumbs-slide {
+  display: block;
+  max-width: 810px;
+  margin: 0 auto;
+}
+.menu-sliders__thumbs-slide-title {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 120%;
+  text-align: center;
+  background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#bebebe));
+  background: linear-gradient(180deg, #fff 0%, #bebebe 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.menu-sliders__thumbs-slide-description {
+  margin: 0 0 20px;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
+  text-align: center;
+  background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#bebebe));
+  background: linear-gradient(180deg, #fff 0%, #bebebe 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.menu-sliders__thumbs-slide-login {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
