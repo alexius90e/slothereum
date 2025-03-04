@@ -10,9 +10,12 @@ html {
 body {
   position: relative;
   margin: 0;
-  overflow-y: hidden;
   color: #181d42;
   background-color: #ffffff;
+}
+body.noscroll {
+  display: block;
+  overflow-y: hidden;
 }
 
 a,
@@ -970,4 +973,33 @@ img {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+}
+
+.video-screen {
+  max-height: 100dvh;
+  max-width: 100dvw;
+  overflow: hidden;
+}
+.video-screen__wrapper {
+  max-height: 100dvh;
+  max-width: 100%;
+  width: 100%;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.video-screen__content {
+  position: relative;
+  min-height: 500dvh;
+  max-width: 100%;
+}
+.video-screen__video {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: block;
+  height: 100dvh;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }

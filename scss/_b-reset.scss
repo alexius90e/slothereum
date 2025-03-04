@@ -11,9 +11,13 @@ html {
 body {
   position: relative;
   margin: 0;
-  overflow-y: hidden;
   color: $black;
   background-color: $white;
+
+  &.noscroll {
+    display: block; 
+    overflow-y: hidden;
+  }
 }
 
 a,
