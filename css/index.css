@@ -1554,8 +1554,7 @@ img {
 }
 @media (max-width: 576px) {
   .os-cap__modal {
-    top: 45px;
-    bottom: auto;
+    bottom: 40px;
   }
 }
 .os-cap__modal.active {

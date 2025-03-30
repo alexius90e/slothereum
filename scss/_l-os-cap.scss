@@ -188,8 +188,7 @@
     transform: translateX(-50%);
 
     @include mobile {
-      top: 45px;
-      bottom: auto;
+      bottom: 40px;
     }
 
     &.active {
