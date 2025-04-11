@@ -1,3 +1,19 @@
+/// header lang
+
+const headerLang = document.querySelector('.header__lang');
+
+if (headerLang) {
+  headerLang.addEventListener('click', (event) => {
+    const isLayout = event.target === event.currentTarget;
+    const isCurrent = event.target.classList.contains('header__lang-current');
+
+    if (isLayout) headerLang.classList.remove('active');
+    if (isCurrent) headerLang.classList.toggle('active');
+  });
+}
+
+/// loading
+
 const loadingEls = document.querySelectorAll(`.loading`);
 
 loadingEls.forEach((loading) => {
@@ -24,19 +40,9 @@ loadingEls.forEach((loading) => {
     loadingProgressBar.addEventListener('animationend', () => {
       clearInterval(loadingIntervalId);
       loadingProgressBar.style.width = '100%';
-      if (loadingScreen) loadingScreen.style.display = 'none';
+      setInterval(() => {
+        if (loadingScreen) loadingScreen.style.display = 'none';
+      }, 500);
     });
   }
 });
-
-const headerLang = document.querySelector('.header__lang');
-
-if (headerLang) {
-  headerLang.addEventListener('click', (event) => {
-    const isLayout = event.target === event.currentTarget;
-    const isCurrent = event.target.classList.contains('header__lang-current');
-
-    if (isLayout) headerLang.classList.remove('active');
-    if (isCurrent) headerLang.classList.toggle('active');
-  });
-}
