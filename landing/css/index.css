@@ -520,7 +520,7 @@ figure {
 }
 
 .intro {
-  background: url(../assets/intro-bg.jpg) center/cover no-repeat;
+  background: url(../assets/intro-bg.webp) center/cover no-repeat;
 }
 .intro__content {
   display: -webkit-box;
@@ -572,7 +572,7 @@ figure {
 }
 
 .connect-game {
-  background: url(../assets/page-bg.jpg) center/cover no-repeat;
+  background: url(../assets/page-bg.webp) center/cover no-repeat;
 }
 .connect-game__wrapper {
   display: -webkit-box;
