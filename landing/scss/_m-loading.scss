@@ -1,0 +1,104 @@
+@keyframes loading {
+  0% {
+    transform: translateX(-61px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes progressLoading {
+  0% {
+    width: 0;
+  }
+  15% {
+    width: 20%;
+  }
+  50% {
+    width: 40%;
+  }
+  70% {
+    width: 60%;
+  }
+  85% {
+    width: 80%;
+  }
+  94% {
+    width: 100%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+
+  @include mobile {
+    max-width: 260px;
+  }
+
+  &__body {
+    border-radius: 40px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  &__progress {
+    position: relative;
+    border-radius: 90px;
+    height: 61px;
+    width: 100%;
+    overflow: hidden;
+
+    @include mobile {
+      height: 40px;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: calc(100% + 61px);
+      background-image: url(../assets/progress-bg.svg);
+      background-size: auto 100%;
+      background-repeat: repeat-x;
+      background-color: #bdd2ff;
+      background-position: left center;
+      animation: loading 3s linear infinite;
+    }
+
+    &-bar {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      width: 0%;
+      overflow: hidden;
+      font-family: 'IBM Plex Sans', sans-serif;
+      font-weight: 700;
+      font-size: 26px;
+      line-height: 100%;
+      color: #fff;
+      background-color: #2b6efd;
+      transition: width ease-in-out 0.1s;
+
+      @include mobile {
+        font-size: 16px;
+      }
+    }
+
+    &.animated &-bar {
+      animation: progressLoading 2.5s linear;
+    }
+  }
+}

@@ -1,0 +1,49 @@
+.loading-screen {
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100dvh;
+    padding: 40px 0;
+    box-sizing: border-box;
+  }
+
+  &__figure {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0 15px;
+
+    &-image {
+      display: block;
+      max-width: 100%;
+      width: 248px;
+      height: auto;
+
+      @include laptop {
+        width: 200px;
+      }
+
+      @include mobile {
+        width: 150px;
+      }
+    }
+  }
+
+  &__title {
+    margin: 0 0 30px;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 98%;
+    color: #fff;
+
+    @include laptop {
+      font-size: 22px;
+    }
+
+    @include mobile {
+      font-size: 18px;
+    }
+  }
+}
