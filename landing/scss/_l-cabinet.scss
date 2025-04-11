@@ -272,12 +272,14 @@
     }
 
     &-list {
-      max-height: 420px;
+      max-height: 400px;
       margin-right: -10px;
+      margin-bottom: -20px;
       overflow: auto;
 
       @include laptop {
         max-height: none;
+        margin: 0;
         overflow: visible;
       }
 

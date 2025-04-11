@@ -1091,13 +1091,15 @@ figure {
   }
 }
 .cabinet__stats-list {
-  max-height: 420px;
+  max-height: 400px;
   margin-right: -10px;
+  margin-bottom: -20px;
   overflow: auto;
 }
 @media (max-width: 1024px) {
   .cabinet__stats-list {
     max-height: none;
+    margin: 0;
     overflow: visible;
   }
 }
