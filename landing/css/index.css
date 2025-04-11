@@ -800,6 +800,7 @@ figure {
   }
 }
 .cabinet__content {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -829,6 +830,23 @@ figure {
     -webkit-backdrop-filter: none;
             backdrop-filter: none;
     background-color: rgba(14, 14, 22, 0);
+  }
+}
+.cabinet__content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  display: block;
+  width: 246px;
+  height: 98px;
+  background: url(../assets/slo-vertical.png) center/246px no-repeat;
+  -webkit-transform: translate3d(-50%, -100%, 0);
+          transform: translate3d(-50%, -100%, 0);
+}
+@media (max-width: 1024px) {
+  .cabinet__content::before {
+    display: none;
   }
 }
 .cabinet__info {

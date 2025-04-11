@@ -12,7 +12,7 @@
       right: -100px;
       bottom: -100px;
       z-index: 1;
-      color: rgba($color: #0e0e16, $alpha: 1.0);
+      color: rgba($color: #0e0e16, $alpha: 1);
       background: linear-gradient(180deg, rgba($color: #0e0e16, $alpha: 0), #0e0e16 50%);
       filter: blur(30px);
     }
@@ -38,6 +38,7 @@
   }
 
   &__content {
+    position: relative;
     display: flex;
     align-items: stretch;
     gap: 32px;
@@ -58,6 +59,22 @@
       border-radius: 16px;
       backdrop-filter: none;
       background-color: rgba(14, 14, 22, 0);
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      display: block;
+      width: 246px;
+      height: 98px;
+      background: url(../assets/slo-vertical.png) center / 246px no-repeat;
+      transform: translate3d(-50%, -100%, 0);
+
+      @include laptop {
+        display: none;
+      }
     }
   }
 

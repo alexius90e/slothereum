@@ -32,17 +32,9 @@ loadingEls.forEach((loading) => {
   if (loadingProgressBar) {
     let loadingIntervalId = setInterval(updateProgressBar, 100);
 
-    loadingProgressBar.addEventListener('animationstart', () => {
-      loadingProgressBar.style.width = '0%';
-      loadingIntervalId = setInterval(updateProgressBar, 100);
-    });
-
     loadingProgressBar.addEventListener('animationend', () => {
       clearInterval(loadingIntervalId);
-      loadingProgressBar.style.width = '100%';
-      setInterval(() => {
-        if (loadingScreen) loadingScreen.style.display = 'none';
-      }, 500);
+      if (loadingScreen) loadingScreen.style.display = 'none';
     });
   }
 });
