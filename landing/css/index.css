@@ -1075,9 +1075,10 @@ figure {
   font-weight: 500;
   font-size: 14px;
   line-height: 143%;
-  color: #5d5d62;
+  color: #ffffff;
   border: none;
   border-radius: 12px;
+  outline: none;
   background: url(../assets/search-magnifying-glass.svg) left 20px center/24px no-repeat;
   background-color: #1a1a1c;
 }
@@ -1087,8 +1088,20 @@ figure {
     background-position: left 13px center;
   }
 }
-.cabinet__stats-heading-user-search-input:hover {
-  color: #ffffff;
+.cabinet__stats-heading-user-search-input::-webkit-input-placeholder {
+  color: #5d5d62;
+}
+.cabinet__stats-heading-user-search-input::-moz-placeholder {
+  color: #5d5d62;
+}
+.cabinet__stats-heading-user-search-input:-ms-input-placeholder {
+  color: #5d5d62;
+}
+.cabinet__stats-heading-user-search-input::-ms-input-placeholder {
+  color: #5d5d62;
+}
+.cabinet__stats-heading-user-search-input::placeholder {
+  color: #5d5d62;
 }
 .cabinet__stats-heading-points {
   -webkit-box-flex: 0;
