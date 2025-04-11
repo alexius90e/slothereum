@@ -22,15 +22,18 @@
     display: flex;
     align-items: flex-start;
     gap: 32px;
+    width: 100%;
     padding: 32px;
+    box-sizing: border-box;
     border: 1px solid rgba(255, 255, 255, 0.4);
     border-radius: 16px;
     backdrop-filter: blur(30px);
     background-color: rgba(14, 14, 22, 0.85);
 
-    @include tablet {
+    @include laptop {
       flex-wrap: wrap;
       gap: 16px;
+      max-width: 640px;
       padding: 0;
       border: none;
       border-radius: 0px;
@@ -42,7 +45,7 @@
   &__info {
     flex: 0 0 calc(100% / 2 - 32px / 2);
 
-    @include tablet {
+    @include laptop {
       flex: 1 1 100%;
       padding: 24px;
       box-sizing: border-box;
@@ -92,7 +95,7 @@
   &__connect {
     flex: 0 0 calc(100% / 2 - 32px / 2);
 
-    @include tablet {
+    @include laptop {
       flex: 1 1 100%;
     }
 
@@ -113,7 +116,7 @@
       border-radius: 12px;
       background-color: #32342c;
 
-      @include tablet {
+      @include laptop {
         border: 1px solid rgba(255, 255, 255, 0.4);
         border-radius: 16px;
         backdrop-filter: blur(30px);

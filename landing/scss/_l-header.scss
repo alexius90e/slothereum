@@ -154,6 +154,7 @@
       opacity: 0;
       background-color: #373742;
       transition: opacity ease-out 0.2s;
+      display: none;
 
       &-item {
         min-width: 46px;
@@ -171,6 +172,7 @@
     }
 
     &.active &-list {
+      display: flex;
       opacity: 1;
     }
   }
