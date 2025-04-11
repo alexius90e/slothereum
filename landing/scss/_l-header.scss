@@ -1,2 +1,177 @@
 .header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  padding: 32px 0;
+
+  @include laptop {
+    padding: 24px 0;
+  }
+
+  @include mobile {
+    padding: 20px;
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    max-width: 350px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 11px 32px;
+    box-sizing: border-box;
+    border: 1px solid rgba($color: #ffffff, $alpha: 0.4);
+    border-radius: 18px;
+    background: rgba(14, 14, 22, 0.75);
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    width: fit-content;
+
+    &-icon {
+      display: block;
+      flex: 0 0 auto;
+      max-width: 100%;
+      width: 26px;
+      height: auto;
+    }
+
+    &-text {
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 222%;
+      text-transform: uppercase;
+      text-align: center;
+      color: #fff;
+    }
+  }
+
+  &__controls {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  &__social {
+    display: flex;
+    align-items: center;
+    flex: 0 0 auto;
+    gap: 10px;
+
+    &-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+      flex: 0 0 auto;
+      border-radius: 6px;
+
+      &_x {
+        background-color: #282828;
+        filter: invert(100%);
+      }
+
+      &_tg {
+        background-image: linear-gradient(135deg, #0b00e2 0%, #3184ff 100%);
+      }
+
+      &-image {
+        display: block;
+        max-width: 100%;
+        width: 12px;
+        height: auto;
+      }
+    }
+  }
+
+  &__lang {
+    position: relative;
+    z-index: 10;
+
+    &::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: none;
+    }
+
+    &.active::before {
+      display: block;
+    }
+
+    &-current {
+      display: flex;
+      align-items: center;
+      padding: 8px 16px;
+      gap: 4px;
+      font-weight: 500;
+      font-size: 16px;
+      color: #fff;
+      border-radius: 12px;
+      background-color: #696974;
+      cursor: pointer;
+
+      &::after {
+        content: '';
+        display: block;
+        flex: 0 0 auto;
+        width: 20px;
+        aspect-ratio: 1 / 1;
+        background: url(../assets/caret-down.svg) center / cover no-repeat;
+        transition: transform ease-out 0.2s;
+      }
+    }
+
+    &.active &-current {
+      &::after {
+        transform: rotate(180deg);
+      }
+    }
+
+    &-list {
+      position: absolute;
+      top: calc(100% + 8px);
+      right: 0;
+      z-index: 100;
+      display: flex;
+      flex: 0 0 auto;
+      flex-direction: column;
+      gap: 4px;
+      padding: 8px 8px;
+      border-radius: 12px;
+      box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.25);
+      opacity: 0;
+      background-color: #373742;
+      transition: opacity ease-out 0.2s;
+
+      &-item {
+        min-width: 46px;
+        padding: 4px 8px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 21px;
+        color: #fff;
+        border-radius: 4px;
+
+        &:hover {
+          background-color: rgba($color: #ffffff, $alpha: 0.1);
+        }
+      }
+    }
+
+    &.active &-list {
+      opacity: 1;
+    }
+  }
 }
