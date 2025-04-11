@@ -249,7 +249,7 @@ figure {
 }
 @media (max-width: 576px) {
   .header {
-    padding: 20px;
+    padding: 20px 0;
   }
 }
 .header__content {
@@ -569,4 +569,177 @@ figure {
   width: 18px;
   aspect-ratio: 1/1;
   background: url(../assets/globe.svg) center/cover no-repeat;
+}
+
+.connect-game {
+  background: url(../assets/page-bg.jpg) center/cover no-repeat;
+}
+.connect-game__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 100dvh;
+  padding: 168px 0 40px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+@media (max-width: 1024px) {
+  .connect-game__wrapper {
+    padding: 168px 0 40px;
+  }
+}
+@media (max-width: 576px) {
+  .connect-game__wrapper {
+    padding: 124px 0 52px;
+  }
+}
+.connect-game__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 32px;
+  padding: 32px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 16px;
+  -webkit-backdrop-filter: blur(30px);
+          backdrop-filter: blur(30px);
+  background-color: rgba(14, 14, 22, 0.85);
+}
+@media (max-width: 768px) {
+  .connect-game__content {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 16px;
+    padding: 0;
+    border: none;
+    border-radius: 0px;
+    -webkit-backdrop-filter: none;
+            backdrop-filter: none;
+    background-color: rgba(14, 14, 22, 0);
+  }
+}
+.connect-game__info {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 calc(50% - 16px);
+          flex: 0 0 calc(50% - 16px);
+}
+@media (max-width: 768px) {
+  .connect-game__info {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+    padding: 24px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 16px;
+    -webkit-backdrop-filter: blur(30px);
+            backdrop-filter: blur(30px);
+    background-color: rgba(14, 14, 22, 0.85);
+  }
+}
+.connect-game__info-title {
+  margin: 0 0 8px;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 109%;
+  text-align: center;
+  color: #fff;
+}
+@media (max-width: 576px) {
+  .connect-game__info-title {
+    font-size: 18px;
+    text-align: left;
+  }
+}
+.connect-game__info-text {
+  margin: 0 0 24px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #fff;
+}
+@media (max-width: 576px) {
+  .connect-game__info-text {
+    margin: 0 0 19px;
+    font-size: 14px;
+    line-height: 129%;
+  }
+}
+.connect-game__info-text:last-child {
+  margin: 0;
+}
+.connect-game__info-text b {
+  font-weight: 700px;
+}
+.connect-game__connect {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 calc(50% - 16px);
+          flex: 0 0 calc(50% - 16px);
+}
+@media (max-width: 768px) {
+  .connect-game__connect {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+  }
+}
+.connect-game__connect-figure {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.connect-game__connect-figure-image {
+  display: block;
+  max-width: 100%;
+  width: 240px;
+  height: auto;
+}
+.connect-game__connect-info {
+  padding: 16px;
+  border-radius: 12px;
+  background-color: #32342c;
+}
+@media (max-width: 768px) {
+  .connect-game__connect-info {
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 16px;
+    -webkit-backdrop-filter: blur(30px);
+            backdrop-filter: blur(30px);
+    background-color: rgba(14, 14, 22, 0.85);
+  }
+}
+.connect-game__connect-info-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 31px;
+  margin: 0 0 8px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #fff;
+}
+@media (max-width: 576px) {
+  .connect-game__connect-info-text {
+    gap: 18px;
+    font-size: 14px;
+    line-height: 129%;
+  }
 }

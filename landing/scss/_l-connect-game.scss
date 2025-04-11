@@ -1,0 +1,146 @@
+.connect-game {
+  background: url(../assets/page-bg.jpg) center / cover no-repeat;
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100dvh;
+    padding: 168px 0 40px;
+    box-sizing: border-box;
+
+    @include laptop {
+      padding: 168px 0 40px;
+    }
+
+    @include mobile {
+      padding: 124px 0 52px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    align-items: flex-start;
+    gap: 32px;
+    padding: 32px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 16px;
+    backdrop-filter: blur(30px);
+    background-color: rgba(14, 14, 22, 0.85);
+
+    @include tablet {
+      flex-wrap: wrap;
+      gap: 16px;
+      padding: 0;
+      border: none;
+      border-radius: 0px;
+      backdrop-filter: none;
+      background-color: rgba(14, 14, 22, 0);
+    }
+  }
+
+  &__info {
+    flex: 0 0 calc(100% / 2 - 32px / 2);
+
+    @include tablet {
+      flex: 1 1 100%;
+      padding: 24px;
+      box-sizing: border-box;
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      border-radius: 16px;
+      backdrop-filter: blur(30px);
+      background-color: rgba(14, 14, 22, 0.85);
+    }
+
+    &-title {
+      margin: 0 0 8px;
+      font-weight: 500;
+      font-size: 22px;
+      line-height: 109%;
+      text-align: center;
+      color: #fff;
+
+      @include mobile {
+        font-size: 18px;
+        text-align: left;
+      }
+    }
+
+    &-text {
+      margin: 0 0 24px;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 150%;
+      color: #fff;
+
+      @include mobile {
+        margin: 0 0 19px;
+        font-size: 14px;
+        line-height: 129%;
+      }
+
+      &:last-child {
+        margin: 0;
+      }
+
+      & b {
+        font-weight: 700px;
+      }
+    }
+  }
+
+  &__connect {
+    flex: 0 0 calc(100% / 2 - 32px / 2);
+
+    @include tablet {
+      flex: 1 1 100%;
+    }
+
+    &-figure {
+      display: flex;
+      justify-content: center;
+
+      &-image {
+        display: block;
+        max-width: 100%;
+        width: 240px;
+        height: auto;
+      }
+    }
+
+    &-info {
+      padding: 16px;
+      border-radius: 12px;
+      background-color: #32342c;
+
+      @include tablet {
+        border: 1px solid rgba(255, 255, 255, 0.4);
+        border-radius: 16px;
+        backdrop-filter: blur(30px);
+        background-color: rgba(14, 14, 22, 0.85);
+      }
+
+      &-text {
+        display: flex;
+        flex-direction: column;
+        gap: 31px;
+        margin: 0 0 8px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        color: #fff;
+
+        @include mobile {
+          gap: 18px;
+          font-size: 14px;
+          line-height: 129%;
+        }
+      }
+
+      &-controls {
+        &-button {
+        }
+      }
+    }
+  }
+}
