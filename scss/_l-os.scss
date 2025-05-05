@@ -25,7 +25,7 @@
       display: flex;
       flex-wrap: wrap;
       gap: 20px 5px;
-      max-width: 490px;
+      max-width: 325px;
       width: 100%;
     }
 
@@ -101,7 +101,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    padding: 13px 0;
+    padding: 6px 0;
     backdrop-filter: blur(30px);
     background: rgba(70, 70, 70, 0.6);
 
@@ -119,7 +119,7 @@
       &-os {
         font-family: 'IBM Plex Sans', sans-serif;
         font-weight: 500;
-        font-size: 24px;
+        font-size: 16px;
         color: #fff;
       }
 
@@ -127,7 +127,7 @@
         display: flex;
         align-items: center;
         gap: 10px;
-        padding: 10px;
+        padding: 6px;
         border-radius: 12px;
         background-color: rgba($color: #ffffff, $alpha: 0.5);
 
@@ -135,10 +135,10 @@
           display: flex;
           align-items: center;
           justify-content: center;
-          width: 34px;
-          height: 34px;
+          width: 24px;
+          height: 24px;
           flex: 0 0 auto;
-          border-radius: 12px;
+          border-radius: 6px;
 
           &_x {
             background-color: #282828;
@@ -151,7 +151,7 @@
           &-image {
             display: block;
             max-width: 100%;
-            width: 20px;
+            width: 12px;
             height: auto;
           }
         }
@@ -185,7 +185,7 @@
         &-image {
           display: block;
           max-width: 100%;
-          width: 24px;
+          width: 16px;
           height: auto;
         }
       }
@@ -194,7 +194,7 @@
         flex: 0 0 auto;
         font-family: 'IBM Plex Sans', sans-serif;
         font-weight: 500;
-        font-size: 24px;
+        font-size: 16px;
         letter-spacing: 0.02em;
         text-align: right;
         color: #fff;

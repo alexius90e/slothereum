@@ -330,7 +330,7 @@ img {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   gap: 20px 5px;
-  max-width: 490px;
+  max-width: 325px;
   width: 100%;
 }
 .os__main-app {
@@ -425,7 +425,7 @@ img {
   left: 0;
   right: 0;
   bottom: 0;
-  padding: 13px 0;
+  padding: 6px 0;
   -webkit-backdrop-filter: blur(30px);
           backdrop-filter: blur(30px);
   background: rgba(70, 70, 70, 0.6);
@@ -453,7 +453,7 @@ img {
 .os__footer-info-os {
   font-family: "IBM Plex Sans", sans-serif;
   font-weight: 500;
-  font-size: 24px;
+  font-size: 16px;
   color: #fff;
 }
 .os__footer-info-social {
@@ -464,7 +464,7 @@ img {
       -ms-flex-align: center;
           align-items: center;
   gap: 10px;
-  padding: 10px;
+  padding: 6px;
   border-radius: 12px;
   background-color: rgba(255, 255, 255, 0.5);
 }
@@ -478,12 +478,12 @@ img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 34px;
-  height: 34px;
+  width: 24px;
+  height: 24px;
   -webkit-box-flex: 0;
       -ms-flex: 0 0 auto;
           flex: 0 0 auto;
-  border-radius: 12px;
+  border-radius: 6px;
 }
 .os__footer-info-social-link_x {
   background-color: #282828;
@@ -494,7 +494,7 @@ img {
 .os__footer-info-social-link-image {
   display: block;
   max-width: 100%;
-  width: 20px;
+  width: 12px;
   height: auto;
 }
 .os__footer-controls {
@@ -543,7 +543,7 @@ img {
 .os__footer-controls-button-image {
   display: block;
   max-width: 100%;
-  width: 24px;
+  width: 16px;
   height: auto;
 }
 .os__footer-controls-time {
@@ -552,7 +552,7 @@ img {
           flex: 0 0 auto;
   font-family: "IBM Plex Sans", sans-serif;
   font-weight: 500;
-  font-size: 24px;
+  font-size: 16px;
   letter-spacing: 0.02em;
   text-align: right;
   color: #fff;
