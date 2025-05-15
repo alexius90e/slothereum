@@ -176,7 +176,6 @@ authCodeElems.forEach((authCodeElem) => {
         const isEmpty = event.currentTarget.value === '';
 
         if (event.inputType.startsWith('delete') && isEmpty) {
-          console.log('Удаление текста: ', event.inputType);
           inputs[index - 1].focus();
           inputs[index - 1].value = '';
         }
@@ -289,7 +288,6 @@ const osMainApps = document.querySelectorAll('.os__main-app');
 osMainApps.forEach((osMainApp) => {
   osMainApp.addEventListener('click', (event) => {
     showOsSection(osSections.osModal);
-    console.log('osModal');
   });
 });
 
