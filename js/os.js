@@ -1,5 +1,6 @@
 const osSections = {
   loading: 'loading',
+  oscap: 'os-cap',
   auth: 'auth',
   authEmail: 'auth-email',
   authCode: 'auth-code',
@@ -20,31 +21,40 @@ const hideOsSection = (sectionClassName) => {
   if (section) section.classList.add('hidden');
 };
 
-/// loading
+/// oscap
 
-const loading = document.querySelector(`.${osSections.loading}`);
-const loadingProgress = document.querySelector('.loading__progress');
-const loadingProgressBar = document.querySelector('.loading__progress-bar');
+const oscapLoading = document.querySelector(`.os-cap__loading`);
+const oscapLoadingProgress = document.querySelector('.os-cap__loading-progress');
+const oscapLoadingProgressBar = document.querySelector('.os-cap__loading-progress-bar');
+const oscapModal = document.querySelector('.os-cap__modal');
 
-if (loading && loadingProgress) {
-  loadingProgress.classList.add('animated');
-}
-
-const updateProgressBar = () => {
-  if (!loadingProgressBar || !loadingProgress) return;
-  const loadingProgressWidth = loadingProgress.offsetWidth;
-  const loadingProgressBarWidth = loadingProgressBar.offsetWidth;
-  const progress = Math.floor((loadingProgressBarWidth / loadingProgressWidth) * 100);
-  loadingProgressBar.textContent = `${progress}%`;
+const updateOscapProgressBar = () => {
+  if (!oscapLoadingProgressBar || !oscapLoadingProgress) return;
+  const oscapLoadingProgressWidth = oscapLoadingProgress.offsetWidth;
+  const oscapLoadingProgressBarWidth = oscapLoadingProgressBar.offsetWidth;
+  const progress = Math.floor((oscapLoadingProgressBarWidth / oscapLoadingProgressWidth) * 100);
+  oscapLoadingProgressBar.textContent = `${progress}%`;
 };
 
-if (loadingProgressBar) {
-  const loadingIntervalId = setInterval(updateProgressBar, 100);
+if (oscapLoadingProgressBar) {
+  const oscapLoadingIntervalId = setInterval(updateOscapProgressBar, 100);
 
-  loadingProgressBar.addEventListener('animationend', () => {
-    clearInterval(loadingIntervalId);
-    hideOsSection(osSections.loading);
-    showOsSection(osSections.auth);
+  oscapLoadingProgressBar.addEventListener('animationend', () => {
+    clearInterval(oscapLoadingIntervalId);
+    oscapLoading.style.display = 'none';
+    if (oscapModal) oscapModal.classList.add('active');
+  });
+}
+
+if (oscapLoadingProgressBar) {
+  const loadingIntervalId = setInterval(updateOscapProgressBar, 100);
+
+  oscapLoadingProgressBar.addEventListener('animationend', () => {
+    setTimeout(() => {
+      clearInterval(loadingIntervalId);
+      hideOsSection(osSections.oscap);
+      showOsSection(osSections.auth);
+    }, 2000);
   });
 }
 
