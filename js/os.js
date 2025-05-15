@@ -102,7 +102,23 @@ const authCodeElems = document.querySelectorAll(`.${osSections.authCode}`);
 authCodeElems.forEach((authCodeElem) => {
   const inputs = authCodeElem.querySelectorAll('.auth-code__code-input');
   const continueButton = authCodeElem.querySelector('.auth-code__continue-button');
+  const clearButton = authCodeElem.querySelector('.auth-code__clear-button');
   const isEmailElem = authCodeElem.classList.contains('auth-code_email');
+
+  authCodeElem.addEventListener('click', (event) => {
+    const isBackButton = event.target.classList.contains('auth-code__heading-back');
+
+    if (isBackButton) {
+      hideOsSection(osSections.authCodeEmail);
+      hideOsSection(osSections.authCodeRef);
+
+      if (isEmailElem) {
+        showOsSection(osSections.authEmail);
+      } else {
+        showOsSection(osSections.auth);
+      }
+    }
+  });
 
   const checkInputs = () => {
     if (!continueButton) return;
@@ -146,12 +162,23 @@ authCodeElems.forEach((authCodeElem) => {
     });
   });
 
-  if (continueButton)
+  if (continueButton) {
     continueButton.addEventListener('click', () => {
       hideOsSection(osSections.authCodeEmail);
       hideOsSection(osSections.authCodeRef);
       showOsSection(osSections.swipeLogin);
     });
+  }
+
+  if (clearButton) {
+    clearButton.addEventListener('click', () => {
+      inputs.forEach((input) => {
+        input.value = '';
+      });
+      if (continueButton) continueButton.disabled = true;
+      authCodeElem.classList.remove('auth-code_invalid');
+    });
+  }
 });
 
 /// swipe-login
