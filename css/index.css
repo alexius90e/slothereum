@@ -809,12 +809,34 @@ img {
   background-color: rgba(0, 0, 0, 0.4);
 }
 .auth__body {
+  position: relative;
   max-width: 560px;
   padding: 50px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-radius: 40px;
   background: #181818;
+}
+@media (max-width: 768px) {
+  .auth__body {
+    max-width: calc(100dvw - 40px);
+    padding: 32px 16px;
+    border-radius: 24px;
+  }
+}
+.auth__body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  z-index: -1;
+  display: block;
+  max-width: 402px;
+  width: 72%;
+  aspect-ratio: 402/160;
+  background: url(../assets/os/character.png) center/cover no-repeat;
+  -webkit-transform: translate3d(-50%, -100%, 0);
+          transform: translate3d(-50%, -100%, 0);
 }
 .auth__title {
   margin: 0 0 40px;
@@ -824,6 +846,12 @@ img {
   line-height: 120%;
   color: #fff;
   text-align: center;
+}
+@media (max-width: 768px) {
+  .auth__title {
+    margin-bottom: 20px;
+    font-size: 22px;
+  }
 }
 .auth__method {
   display: -webkit-box;
@@ -836,6 +864,13 @@ img {
       -ms-flex-pack: center;
           justify-content: center;
   gap: 20px;
+}
+@media (max-width: 768px) {
+  .auth__method {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 10px;
+  }
 }
 .auth__method-button {
   display: -webkit-box;
@@ -856,6 +891,20 @@ img {
   transition: transform ease-in-out 0.2s, -webkit-transform ease-in-out 0.2s;
   will-change: transform;
   cursor: pointer;
+}
+@media (max-width: 768px) {
+  .auth__method-button {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 72px;
+            flex: 0 0 72px;
+  }
+}
+@media (max-width: 576px) {
+  .auth__method-button {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 68px;
+            flex: 0 0 68px;
+  }
 }
 .auth__method-button:hover {
   -webkit-transform: translateY(-8px);
@@ -881,6 +930,12 @@ img {
   background-color: #282828;
   pointer-events: none;
 }
+@media (max-width: 768px) {
+  .auth__method-button-icon {
+    width: 60px;
+    height: 60px;
+  }
+}
 .auth__method-button-icon-image {
   display: block;
   max-width: 100%;
@@ -889,8 +944,8 @@ img {
 .auth__method-button_tg .auth__method-button-icon {
   background-image: linear-gradient(137deg, #100ee5 0%, #275ef7 99.62%);
 }
-.auth__method-button_gmail .auth__method-button-icon {
-  background-image: linear-gradient(135deg, #ffa9a7 0%, #ceffdb 99.62%);
+.auth__method-button_wallet .auth__method-button-icon {
+  background-image: linear-gradient(140deg, #99ffb9 0%, #024db8 99.62%);
 }
 .auth__method-button_email .auth__method-button-icon {
   background-image: linear-gradient(140deg, #99ffb9 0%, #0aa30a 99.62%);
@@ -905,6 +960,66 @@ img {
   border-radius: 2px;
   background-color: rgba(0, 0, 0, 0.4);
   pointer-events: none;
+}
+@media (max-width: 768px) {
+  .auth__method-button-name {
+    font-size: 14px;
+  }
+}
+@media (max-width: 576px) {
+  .auth__method-button-name {
+    font-size: 13px;
+  }
+}
+
+.auth-email {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 0 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-backdrop-filter: blur(50px);
+          backdrop-filter: blur(50px);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.auth-email__body {
+  max-width: 560px;
+  padding: 50px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 40px;
+  background: #181818;
+}
+@media (max-width: 768px) {
+  .auth-email__body {
+    max-width: calc(100dvw - 40px);
+    padding: 32px 16px;
+    border-radius: 24px;
+  }
+}
+.auth-email__title {
+  margin: 0 0 14px;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 120%;
+  color: #fff;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .auth-email__title {
+    margin-bottom: 20px;
+    font-size: 22px;
+  }
 }
 
 .auth-code {

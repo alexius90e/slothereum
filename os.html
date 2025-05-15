@@ -10,10 +10,9 @@
   </head>
 
   <body class="noscroll">
-
     <main class="main">
       <div class="os-body">
-        <section class="loading">
+        <section class="loading hidden">
           <div class="loading__body">
             <div class="loading__title">loading OS</div>
             <div class="loading__progress">
@@ -22,22 +21,11 @@
           </div>
         </section>
 
-        <section class="auth hidden">
+        <section class="auth">
           <div class="auth__body">
             <div class="auth__title">Authorization</div>
 
             <div class="auth__method">
-              <div class="auth__method-button auth__method-button_tg" role="button">
-                <div class="auth__method-button-icon">
-                  <img
-                    class="auth__method-button-icon-image"
-                    src="./assets/os/logo-tg.svg"
-                    alt="tg"
-                  />
-                </div>
-                <div class="auth__method-button-name">Telegram</div>
-              </div>
-
               <div class="auth__method-button auth__method-button_x" role="button">
                 <div class="auth__method-button-icon">
                   <img
@@ -49,15 +37,15 @@
                 <div class="auth__method-button-name">Twitter</div>
               </div>
 
-              <div class="auth__method-button auth__method-button_gmail" role="button">
+              <div class="auth__method-button auth__method-button_tg" role="button">
                 <div class="auth__method-button-icon">
                   <img
                     class="auth__method-button-icon-image"
-                    src="./assets/os/logo-gmail.svg"
+                    src="./assets/os/logo-tg.svg"
                     alt="tg"
                   />
                 </div>
-                <div class="auth__method-button-name">Gmail</div>
+                <div class="auth__method-button-name">Telegram</div>
               </div>
 
               <div class="auth__method-button auth__method-button_email" role="button">
@@ -70,7 +58,24 @@
                 </div>
                 <div class="auth__method-button-name">E-mail</div>
               </div>
+
+              <div class="auth__method-button auth__method-button_wallet" role="button">
+                <div class="auth__method-button-icon">
+                  <img
+                    class="auth__method-button-icon-image"
+                    src="./assets/os/logo-wallet.svg"
+                    alt="tg"
+                  />
+                </div>
+                <div class="auth__method-button-name">Wallet</div>
+              </div>
             </div>
+          </div>
+        </section>
+
+        <section class="auth-email hidden">
+          <div class="auth-email__body">
+            <div class="auth-email__title">What’s your email?</div>
           </div>
         </section>
 
@@ -230,7 +235,6 @@
             <div class="os__container">
               <div class="os__main-content">
                 <div class="os__main-apps">
-
                   <div class="os__main-app">
                     <figure class="os__main-app-icon">
                       <img

@@ -26,9 +26,7 @@ const loadingProgress = document.querySelector('.loading__progress');
 const loadingProgressBar = document.querySelector('.loading__progress-bar');
 
 if (loading && loadingProgress) {
-  loading.addEventListener('mouseover', () => {
-    loadingProgress.classList.add('animated');
-  });
+  loadingProgress.classList.add('animated');
 }
 
 const updateProgressBar = () => {
