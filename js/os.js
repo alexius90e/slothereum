@@ -172,11 +172,11 @@ authCodeElems.forEach((authCodeElem) => {
     });
 
     if (index > 0) {
-      input.addEventListener('keydown', (event) => {
+      input.addEventListener('beforeinput', (event) => {
         const isEmpty = event.currentTarget.value === '';
-        const isBackspaceButton = event.code === 'Backspace';
 
-        if (isEmpty && isBackspaceButton) {
+        if (event.inputType.startsWith('delete') && isEmpty) {
+          console.log('Удаление текста: ', event.inputType);
           inputs[index - 1].focus();
           inputs[index - 1].value = '';
         }
