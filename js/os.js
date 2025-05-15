@@ -66,7 +66,7 @@ if (authElem) {
   authElem.addEventListener('click', (event) => {
     const isTgButton = event.target.classList.contains('auth__method-button_tg');
     const isXButton = event.target.classList.contains('auth__method-button_x');
-    const isGmailButton = event.target.classList.contains('auth__method-button_gmail');
+    const isWalletButton = event.target.classList.contains('auth__method-button_wallet');
     const isEmailButton = event.target.classList.contains('auth__method-button_email');
 
     if (isEmailButton) {
@@ -74,7 +74,7 @@ if (authElem) {
       showOsSection(osSections.authEmail);
     }
 
-    if (isTgButton || isXButton || isGmailButton) {
+    if (isTgButton || isXButton || isWalletButton) {
       hideOsSection(osSections.auth);
       showOsSection(osSections.authCodeRef);
     }
