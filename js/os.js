@@ -170,6 +170,17 @@ authCodeElems.forEach((authCodeElem) => {
         checkInputs();
       }
     });
+
+    if (index > 0) {
+      input.addEventListener('keydown', (event) => {
+        const isEmpty = event.currentTarget.value === '';
+        const isBackspaceButton = event.code === 'Backspace';
+
+        if (isEmpty && isBackspaceButton) {
+          inputs[index - 1].focus();
+        }
+      });
+    }
   });
 
   if (continueButton) {
