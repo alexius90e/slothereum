@@ -178,6 +178,7 @@ authCodeElems.forEach((authCodeElem) => {
 
         if (isEmpty && isBackspaceButton) {
           inputs[index - 1].focus();
+          inputs[index - 1].value = '';
         }
       });
     }
