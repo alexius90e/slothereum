@@ -1,6 +1,5 @@
 const osSections = {
-  loading: 'loading',
-  oscap: 'os-cap',
+  loading: 'os-cap',
   auth: 'auth',
   authEmail: 'auth-email',
   authCode: 'auth-code',
@@ -20,6 +19,17 @@ const hideOsSection = (sectionClassName) => {
   const section = document.querySelector(`.${sectionClassName}`);
   if (section) section.classList.add('hidden');
 };
+
+const shakeOsSections = () => {
+  Object.values(osSections).forEach((sectionName) => {
+    if (sectionName !== osSections.loading) {
+      showOsSection(sectionName);
+      hideOsSection(sectionName);
+    }
+  });
+};
+
+shakeOsSections();
 
 /// oscap
 
@@ -50,11 +60,9 @@ if (oscapLoadingProgressBar) {
   const loadingIntervalId = setInterval(updateOscapProgressBar, 100);
 
   oscapLoadingProgressBar.addEventListener('animationend', () => {
-    setTimeout(() => {
-      clearInterval(loadingIntervalId);
-      hideOsSection(osSections.oscap);
-      showOsSection(osSections.auth);
-    }, 2000);
+    clearInterval(loadingIntervalId);
+    hideOsSection(osSections.loading);
+    showOsSection(osSections.auth);
   });
 }
 
