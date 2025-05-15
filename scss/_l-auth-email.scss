@@ -11,31 +11,157 @@
 
   &__body {
     max-width: 560px;
+    width: 100%;
     padding: 50px;
     box-sizing: border-box;
     border-radius: 40px;
     background: #181818;
 
-    @include tablet {
+    @include mobile {
       max-width: calc(100dvw - 40px);
+      width: 560px;
       padding: 32px 16px;
       border-radius: 24px;
     }
   }
 
-  &__title {
+  &__heading {
+    display: flex;
+    align-items: center;
     margin: 0 0 14px;
-    font-family: 'IBM Plex Sans', sans-serif;
-    font-weight: 500;
-    font-size: 28px;
-    line-height: 120%;
-    color: #fff;
-    text-align: center;
 
-    @include tablet {
+    @include mobile {
       margin-bottom: 20px;
-      font-size: 22px;
+    }
+
+    &-title {
+      flex: 1 1 100%;
+      margin: 0;
+      padding: 0 38px 0 10px;
+      font-family: 'IBM Plex Sans', sans-serif;
+      font-weight: 500;
+      font-size: 28px;
+      line-height: 120%;
+      color: #fff;
+      text-align: center;
+
+      @include mobile {
+        font-size: 22px;
+      }
+    }
+
+    &-back {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: 0 0 auto;
+      padding: 0;
+      width: 28px;
+      aspect-ratio: 1 / 1;
+      border: none;
+      border-radius: 6px;
+      background-color: #29292b;
+      transition: filter ease-out 0.2s;
+      cursor: pointer;
+
+      &:hover {
+        filter: brightness(1.1);
+      }
+
+      &:active {
+        filter: brightness(1);
+      }
+
+      &::before {
+        content: '';
+        display: inline-block;
+        width: 16px;
+        aspect-ratio: 1 / 1;
+        background: url(../assets/os/back.svg) center / cover no-repeat;
+      }
     }
   }
 
+  &__description {
+    margin: 0 0 20px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    color: #fff;
+    text-align: center;
+  }
+
+  &__form {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    @include mobile {
+      gap: 8px;
+    }
+
+    &-input {
+      display: block;
+      flex: 1 1 auto;
+      min-height: 60px;
+      width: 100%;
+      padding: 18px 20px;
+      box-sizing: border-box;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 100%;
+      color: #fff;
+      border: none;
+      border-radius: 20px;
+      background-color: #222222;
+
+      @include mobile {
+        border-radius: 14px;
+      }
+
+      &:focus {
+        outline-color: #333333;
+      }
+
+      &::placeholder {
+        color: #ffffff;
+      }
+    }
+
+    &-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: 0 0 auto;
+      width: 60px;
+      padding: 0;
+      aspect-ratio: 1 / 1;
+      border: none;
+      border-radius: 20px;
+      background-color: #0056d2;
+      transition: filter ease-out 0.2s;
+      cursor: pointer;
+
+      @include mobile {
+        border-radius: 14px;
+      }
+
+      &:hover {
+        filter: brightness(1.1);
+      }
+
+      &:active {
+        filter: brightness(1);
+      }
+
+      &::before {
+        content: '';
+        display: inline-block;
+        width: 16px;
+        aspect-ratio: 1 / 1;
+        background: url(../assets/os/back.svg) center / cover no-repeat;
+        transform: rotate(180deg);
+      }
+    }
+  }
 }

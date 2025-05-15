@@ -811,15 +811,17 @@ img {
 .auth__body {
   position: relative;
   max-width: 560px;
+  width: 100%;
   padding: 50px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-radius: 40px;
   background: #181818;
 }
-@media (max-width: 768px) {
+@media (max-width: 576px) {
   .auth__body {
     max-width: calc(100dvw - 40px);
+    width: 560px;
     padding: 32px 16px;
     border-radius: 24px;
   }
@@ -847,7 +849,7 @@ img {
   color: #fff;
   text-align: center;
 }
-@media (max-width: 768px) {
+@media (max-width: 576px) {
   .auth__title {
     margin-bottom: 20px;
     font-size: 22px;
@@ -865,7 +867,7 @@ img {
           justify-content: center;
   gap: 20px;
 }
-@media (max-width: 768px) {
+@media (max-width: 576px) {
   .auth__method {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -891,13 +893,6 @@ img {
   transition: transform ease-in-out 0.2s, -webkit-transform ease-in-out 0.2s;
   will-change: transform;
   cursor: pointer;
-}
-@media (max-width: 768px) {
-  .auth__method-button {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 72px;
-            flex: 0 0 72px;
-  }
 }
 @media (max-width: 576px) {
   .auth__method-button {
@@ -930,7 +925,7 @@ img {
   background-color: #282828;
   pointer-events: none;
 }
-@media (max-width: 768px) {
+@media (max-width: 576px) {
   .auth__method-button-icon {
     width: 60px;
     height: 60px;
@@ -961,11 +956,6 @@ img {
   background-color: rgba(0, 0, 0, 0.4);
   pointer-events: none;
 }
-@media (max-width: 768px) {
-  .auth__method-button-name {
-    font-size: 14px;
-  }
-}
 @media (max-width: 576px) {
   .auth__method-button-name {
     font-size: 13px;
@@ -993,21 +983,41 @@ img {
 }
 .auth-email__body {
   max-width: 560px;
+  width: 100%;
   padding: 50px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-radius: 40px;
   background: #181818;
 }
-@media (max-width: 768px) {
+@media (max-width: 576px) {
   .auth-email__body {
     max-width: calc(100dvw - 40px);
+    width: 560px;
     padding: 32px 16px;
     border-radius: 24px;
   }
 }
-.auth-email__title {
+.auth-email__heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 0 0 14px;
+}
+@media (max-width: 576px) {
+  .auth-email__heading {
+    margin-bottom: 20px;
+  }
+}
+.auth-email__heading-title {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 100%;
+          flex: 1 1 100%;
+  margin: 0;
+  padding: 0 38px 0 10px;
   font-family: "IBM Plex Sans", sans-serif;
   font-weight: 500;
   font-size: 28px;
@@ -1015,11 +1025,160 @@ img {
   color: #fff;
   text-align: center;
 }
-@media (max-width: 768px) {
-  .auth-email__title {
-    margin-bottom: 20px;
+@media (max-width: 576px) {
+  .auth-email__heading-title {
     font-size: 22px;
   }
+}
+.auth-email__heading-back {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  padding: 0;
+  width: 28px;
+  aspect-ratio: 1/1;
+  border: none;
+  border-radius: 6px;
+  background-color: #29292b;
+  -webkit-transition: -webkit-filter ease-out 0.2s;
+  transition: -webkit-filter ease-out 0.2s;
+  transition: filter ease-out 0.2s;
+  transition: filter ease-out 0.2s, -webkit-filter ease-out 0.2s;
+  cursor: pointer;
+}
+.auth-email__heading-back:hover {
+  -webkit-filter: brightness(1.1);
+          filter: brightness(1.1);
+}
+.auth-email__heading-back:active {
+  -webkit-filter: brightness(1);
+          filter: brightness(1);
+}
+.auth-email__heading-back::before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  aspect-ratio: 1/1;
+  background: url(../assets/os/back.svg) center/cover no-repeat;
+}
+.auth-email__description {
+  margin: 0 0 20px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  color: #fff;
+  text-align: center;
+}
+.auth-email__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 16px;
+}
+@media (max-width: 576px) {
+  .auth-email__form {
+    gap: 8px;
+  }
+}
+.auth-email__form-input {
+  display: block;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  min-height: 60px;
+  width: 100%;
+  padding: 18px 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 100%;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  background-color: #222222;
+}
+@media (max-width: 576px) {
+  .auth-email__form-input {
+    border-radius: 14px;
+  }
+}
+.auth-email__form-input:focus {
+  outline-color: #333333;
+}
+.auth-email__form-input::-webkit-input-placeholder {
+  color: #ffffff;
+}
+.auth-email__form-input::-moz-placeholder {
+  color: #ffffff;
+}
+.auth-email__form-input:-ms-input-placeholder {
+  color: #ffffff;
+}
+.auth-email__form-input::-ms-input-placeholder {
+  color: #ffffff;
+}
+.auth-email__form-input::placeholder {
+  color: #ffffff;
+}
+.auth-email__form-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  width: 60px;
+  padding: 0;
+  aspect-ratio: 1/1;
+  border: none;
+  border-radius: 20px;
+  background-color: #0056d2;
+  -webkit-transition: -webkit-filter ease-out 0.2s;
+  transition: -webkit-filter ease-out 0.2s;
+  transition: filter ease-out 0.2s;
+  transition: filter ease-out 0.2s, -webkit-filter ease-out 0.2s;
+  cursor: pointer;
+}
+@media (max-width: 576px) {
+  .auth-email__form-button {
+    border-radius: 14px;
+  }
+}
+.auth-email__form-button:hover {
+  -webkit-filter: brightness(1.1);
+          filter: brightness(1.1);
+}
+.auth-email__form-button:active {
+  -webkit-filter: brightness(1);
+          filter: brightness(1);
+}
+.auth-email__form-button::before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  aspect-ratio: 1/1;
+  background: url(../assets/os/back.svg) center/cover no-repeat;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 .auth-code {

@@ -1,6 +1,7 @@
 const osSections = {
   loading: 'loading',
   auth: 'auth',
+  authEmail: 'auth-email',
   authCode: 'auth-code',
   authCodeRef: 'auth-code_referral',
   authCodeEmail: 'auth-code_email',
@@ -60,12 +61,36 @@ if (authElem) {
 
     if (isEmailButton) {
       hideOsSection(osSections.auth);
-      showOsSection(osSections.authCodeEmail);
+      showOsSection(osSections.authEmail);
     }
 
     if (isTgButton || isXButton || isGmailButton) {
       hideOsSection(osSections.auth);
       showOsSection(osSections.authCodeRef);
+    }
+  });
+}
+
+/// auth-email
+
+const authEmailElem = document.querySelector(`.${osSections.authEmail}`);
+
+if (authEmailElem) {
+  authEmailElem.addEventListener('click', (event) => {
+    const isBackButton = event.target.classList.contains('auth-email__heading-back');
+    const authEmailForm = event.currentTarget.querySelector('.auth-email__form');
+
+    if (authEmailForm) {
+      authEmailForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+        hideOsSection(osSections.authEmail);
+        showOsSection(osSections.authCodeEmail);
+      });
+    }
+
+    if (isBackButton) {
+      hideOsSection(osSections.authEmail);
+      showOsSection(osSections.auth);
     }
   });
 }

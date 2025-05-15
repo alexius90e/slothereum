@@ -21,7 +21,7 @@
           </div>
         </section>
 
-        <section class="auth">
+        <section class="auth hidden">
           <div class="auth__body">
             <div class="auth__title">Authorization</div>
 
@@ -75,15 +75,34 @@
 
         <section class="auth-email hidden">
           <div class="auth-email__body">
-            <div class="auth-email__title">What’s your email?</div>
+            <div class="auth-email__heading">
+              <button class="auth-email__heading-back"></button>
+              <div class="auth-email__heading-title">What’s your email?</div>
+            </div>
+
+            <div class="auth-email__description">We’re excited for you to get started</div>
+
+            <form class="auth-email__form">
+              <input
+                class="auth-email__form-input"
+                type="email"
+                placeholder="your@email.com"
+                required
+              />
+              <button class="auth-email__form-button"></button>
+            </form>
           </div>
         </section>
 
-        <section class="auth-code auth-code_referral hidden">
+        <section class="auth-code auth-code_referral">
           <div class="auth-code__body">
-            <div class="auth-code__title">Write your referral code</div>
+            <div class="auth-code__heading">
+              <button class="auth-code__heading-back"></button>
+              <div class="auth-code__heading-title">Write your invite code</div>
+            </div>
+
             <div class="auth-code__description">
-              Registration is not possible without a referral code.
+              Registration is not possible without a invite code.
             </div>
 
             <div class="auth-code__code">
