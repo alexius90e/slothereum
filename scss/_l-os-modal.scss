@@ -13,7 +13,7 @@
 
   &__body {
     display: block;
-    max-width: 90vw;
+    max-width: calc(100dvw - 40px);
     max-height: 90dvh;
     width: 986px;
     height: 508px;
