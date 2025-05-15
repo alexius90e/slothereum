@@ -29,7 +29,7 @@ const shakeOsSections = () => {
   });
 };
 
-shakeOsSections();
+// shakeOsSections();
 
 /// oscap
 
@@ -184,6 +184,16 @@ authCodeElems.forEach((authCodeElem) => {
         const isEmpty = event.currentTarget.value === '';
 
         if (event.inputType.startsWith('delete') && isEmpty) {
+          inputs[index - 1].focus();
+          inputs[index - 1].value = '';
+        }
+      });
+
+      input.addEventListener('keydown', (event) => {
+        const isEmpty = event.currentTarget.value === '';
+
+        if (event.key === 'Backspace' && isEmpty) {
+          event.preventDefault();
           inputs[index - 1].focus();
           inputs[index - 1].value = '';
         }
