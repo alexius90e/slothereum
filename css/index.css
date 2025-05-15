@@ -1482,6 +1482,11 @@ img {
           backdrop-filter: blur(50px);
   background-color: rgba(0, 0, 0, 0.4);
 }
+@media (max-width: 576px) {
+  .swipe-login__body {
+    max-width: calc(100dvw - 40px);
+  }
+}
 .swipe-login__figure {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1498,6 +1503,11 @@ img {
   max-width: 100%;
   width: 248px;
   height: auto;
+}
+@media (max-width: 576px) {
+  .swipe-login__figure-image {
+    width: 150px;
+  }
 }
 .swipe-login__title {
   margin: 20px 0;
@@ -1523,7 +1533,7 @@ img {
   width: 0;
   height: 100%;
   border-radius: inherit;
-  background-image: linear-gradient(315deg, #a252ff 0%, #4685ff 100%);
+  background-image: linear-gradient(315deg, #401078 0%, #206bfc 100%);
 }
 .swipe-login__slider-draggable {
   position: absolute;

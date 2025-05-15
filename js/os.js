@@ -201,7 +201,7 @@ swipeLoginSliders.forEach((slider) => {
     isDragging = true;
     startX = e.clientX || e.touches[0].clientX;
     draggableLeft = draggable.offsetLeft;
-    maxLeft = slider.clientWidth * 0.6;
+    maxLeft = slider.clientWidth - track.clientHeight;
 
     document.addEventListener('mousemove', drag);
     document.addEventListener('touchmove', drag);
