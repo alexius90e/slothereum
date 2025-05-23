@@ -185,6 +185,9 @@
   }
 
   &__page {
+    display: flex;
+    flex-direction: column;
+
     &-back {
       position: relative;
       min-height: 124px;
@@ -326,6 +329,176 @@
             text-overflow: ellipsis;
             white-space: nowrap;
             overflow: hidden;
+          }
+        }
+      }
+    }
+
+    &-codes {
+      margin: 0 0 16px;
+
+      &-heading {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        justify-content: space-between;
+        margin: 0 0 16px;
+
+        &-title {
+          font-weight: 700;
+          font-size: 18px;
+          line-height: 120%;
+          letter-spacing: 0.04em;
+          color: #fff;
+        }
+
+        &-count {
+          flex: 0 0 auto;
+          width: fit-content;
+          padding: 5px 8px;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 98%;
+          color: #fff;
+          border-radius: 6px;
+          background: #1363dc;
+        }
+
+        &-time {
+          display: flex;
+          align-items: center;
+          flex: 0 0 auto;
+          width: fit-content;
+          padding: 4px 8px;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 98%;
+          color: #fff;
+          border-radius: 6px;
+          background: #1363dc;
+
+          &::before {
+            content: '';
+            display: inline-block;
+            flex: 0 0 auto;
+            width: 16px;
+            aspect-ratio: 1 / 1;
+            background: url(../assets/os/timer.svg) center / cover no-repeat;
+          }
+        }
+      }
+
+      &-list {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        max-height: 160px;
+        overflow: auto;
+        scrollbar-color: #414142 rgba($color: #414142, $alpha: 0);
+        scrollbar-width: thin;
+      }
+
+      &-item {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        padding: 8px;
+        box-sizing: border-box;
+        border-radius: 12px;
+        background: #ffffff;
+        pointer-events: none;
+        filter: grayscale(100%) brightness(20%);
+
+        &::before {
+          content: '';
+          flex: 0 0 auto;
+          width: 32px;
+        }
+
+        &::after {
+          content: '';
+          position: absolute;
+          z-index: 1;
+          top: 1px;
+          left: 1px;
+          right: 1px;
+          bottom: 1px;
+          border-radius: 12px;
+          background-color: #777777;
+        }
+
+        &.active {
+          background: linear-gradient(
+            200deg,
+            #262626 0%,
+            #262626 40%,
+            #cc4bff 50%,
+            #54ccff 80%,
+            #5b90ff 100%
+          );
+          pointer-events: all;
+          filter: grayscale(0%) brightness(100%);
+
+          &::after {
+            background-color: #1a1a1c;
+          }
+        }
+
+        &-code {
+          position: relative;
+          z-index: 10;
+          font-weight: 700;
+          font-size: 18px;
+          line-height: 98%;
+          letter-spacing: 0.1em;
+          color: #d9d9d9;
+        }
+
+        &-copy {
+          position: relative;
+          z-index: 10;
+          flex: 0 0 auto;
+
+          &-button {
+            display: block;
+            width: 32px;
+            aspect-ratio: 1 / 1;
+            padding: 0;
+            border: none;
+            border-radius: 6px;
+            background: url(../assets/os/copy.svg) center / 16px no-repeat;
+            background-color: #888888;
+            cursor: pointer;
+          }
+        }
+
+        &.active &-copy-button {
+          background-color: #262626;
+        }
+      }
+
+      &-more {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 10px 0 0;
+
+        &-button {
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 98%;
+          letter-spacing: 0.04em;
+          text-decoration: underline;
+          text-decoration-skip-ink: none;
+          color: #1363dc;
+          border: none;
+          background-color: rgba($color: #000000, $alpha: 0);
+          cursor: pointer;
+
+          &:hover {
+            text-decoration: none;
           }
         }
       }
