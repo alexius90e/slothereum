@@ -679,8 +679,10 @@ img {
 }
 
 .os-modal-profile .os-modal__body {
+  position: relative;
   width: 390px;
   height: 726px;
+  overflow: hidden;
 }
 .os-modal-profile .os-modal__header-title {
   display: -webkit-box;
@@ -792,6 +794,7 @@ img {
   color: #fff;
   border-radius: 8px;
   background-color: rgba(31, 31, 31, 0.76);
+  pointer-events: none;
 }
 .os-modal-profile__main-social-button-name::after {
   content: "";
@@ -814,6 +817,7 @@ img {
   height: 100%;
   -webkit-filter: grayscale(100%) brightness(50%);
           filter: grayscale(100%) brightness(50%);
+  pointer-events: none;
 }
 .os-modal-profile__main-social-button-figure-image {
   display: block;
@@ -825,6 +829,159 @@ img {
 .os-modal-profile__main-social-button.active .os-modal-profile__main-social-button-figure {
   -webkit-filter: grayscale(0%) brightness(100%);
           filter: grayscale(0%) brightness(100%);
+}
+.os-modal-profile__main-social-email {
+  position: absolute;
+  top: 45px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-backdrop-filter: blur(25px);
+          backdrop-filter: blur(25px);
+  background: rgba(21, 21, 21, 0.5);
+}
+.os-modal-profile__main-social-email-modal {
+  display: block;
+  max-width: calc(100% - 40px);
+  width: 100%;
+  padding: 32px 16px 16px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 24px;
+  background-color: #181818;
+}
+.os-modal-profile__main-social-email-modal-heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 10px;
+  margin: 0 0 14px;
+}
+.os-modal-profile__main-social-email-modal-back {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  width: 28px;
+  aspect-ratio: 1/1;
+  border: none;
+  border-radius: 6px;
+  background-color: #29292b;
+  cursor: pointer;
+}
+.os-modal-profile__main-social-email-modal-back::before {
+  content: "";
+  width: 20px;
+  aspect-ratio: 1/1;
+  background: url(../assets/os/back.svg) center/cover no-repeat;
+}
+.os-modal-profile__main-social-email-modal-title {
+  margin: 0;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 140%;
+  color: #fff;
+}
+.os-modal-profile__main-social-email-modal-description {
+  margin: 0 0 20px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 98%;
+  color: #fff;
+  text-align: center;
+}
+.os-modal-profile__main-social-email-modal-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8px;
+}
+.os-modal-profile__main-social-email-modal-form-input {
+  display: inline-block;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  min-height: 60px;
+  padding: 17px 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 98%;
+  color: #fff;
+  border: none;
+  border-radius: 14px;
+  background-color: #222222;
+}
+.os-modal-profile__main-social-email-modal-form-input::-webkit-input-placeholder {
+  color: #ffffff;
+}
+.os-modal-profile__main-social-email-modal-form-input::-moz-placeholder {
+  color: #ffffff;
+}
+.os-modal-profile__main-social-email-modal-form-input:-ms-input-placeholder {
+  color: #ffffff;
+}
+.os-modal-profile__main-social-email-modal-form-input::-ms-input-placeholder {
+  color: #ffffff;
+}
+.os-modal-profile__main-social-email-modal-form-input::placeholder {
+  color: #ffffff;
+}
+.os-modal-profile__main-social-email-modal-form-submit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 60px;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  aspect-ratio: 1/1;
+  border: none;
+  border-radius: 14px;
+  background-color: #1363dc;
+  cursor: pointer;
+}
+.os-modal-profile__main-social-email-modal-form-submit::before {
+  content: "";
+  width: 24px;
+  aspect-ratio: 1/1;
+  background: url(../assets/os/back.svg) center/cover no-repeat;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 .os-modal-profile__main-referral-button {
   display: -webkit-box;

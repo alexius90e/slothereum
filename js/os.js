@@ -407,17 +407,39 @@ osModals.forEach((modal) => {
 
 const profileMain = document.querySelector('.os-modal-profile__main');
 const profilePages = document.querySelectorAll('.os-modal-profile__page');
+const profileEmailModal = profileMain.querySelector('.os-modal-profile__main-social-email');
 
 if (profileMain) {
   profileMain.addEventListener('click', (event) => {
     const isRefarallBtn = event.target.classList.contains('os-modal-profile__main-referral-button');
+    const isEmailBtn = event.target.classList.contains(
+      'os-modal-profile__main-social-button_email'
+    );
 
     if (isRefarallBtn) {
-      const profilePage = document.querySelector('.os-modal-profile__page:nth-child(3)');
+      const profilePage = document.querySelector('.os-modal-profile__page');
       if (profilePage) {
         profileMain.classList.add('hidden');
         profilePage.classList.remove('hidden');
       }
+    }
+
+    if (isEmailBtn) {
+      console.log(profileEmailModal);
+      profileEmailModal.classList.remove('hidden');
+    }
+  });
+}
+
+if (profileEmailModal) {
+  profileEmailModal.addEventListener('click', (event) => {
+    const isLayout = event.currentTarget === event.target;
+    const isBackBtn = event.target.classList.contains(
+      'os-modal-profile__main-social-email-modal-back'
+    );
+
+    if (isLayout || isBackBtn) {
+      event.currentTarget.classList.add('hidden');
     }
   });
 }
@@ -425,13 +447,14 @@ if (profileMain) {
 profilePages.forEach((profilePage) => {
   profilePage.addEventListener('click', (event) => {
     const isBackButton = event.target.classList.contains('os-modal-profile__page-back-button');
-    const isCopyButton = event.target.classList.contains('os-modal-profile__page-codes-item-copy-button');
+    const isCopyButton = event.target.classList.contains(
+      'os-modal-profile__page-codes-item-copy-button'
+    );
 
     if (isBackButton) {
       if (profileMain) profileMain.classList.remove('hidden');
       event.currentTarget.classList.add('hidden');
     }
-
 
     if (isCopyButton) {
       const codesItemEl = event.target.closest('.os-modal-profile__page-codes-item');

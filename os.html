@@ -435,7 +435,10 @@
                         </figure>
                       </div>
 
-                      <div class="os-modal-profile__main-social-button" role="button">
+                      <div
+                        class="os-modal-profile__main-social-button os-modal-profile__main-social-button_email"
+                        role="button"
+                      >
                         <div class="os-modal-profile__main-social-button-name">E-mail</div>
                         <figure class="os-modal-profile__main-social-button-figure">
                           <img
@@ -455,6 +458,34 @@
                             alt="image"
                           />
                         </figure>
+                      </div>
+
+                      <div class="os-modal-profile__main-social-email hidden">
+                        <div class="os-modal-profile__main-social-email-modal">
+                          <div class="os-modal-profile__main-social-email-modal-heading">
+                            <button class="os-modal-profile__main-social-email-modal-back"></button>
+                            <div class="os-modal-profile__main-social-email-modal-title">
+                              What’s your email?
+                            </div>
+                          </div>
+
+                          <div class="os-modal-profile__main-social-email-modal-description">
+                            We’re excited for you to get started
+                          </div>
+
+                          <form class="os-modal-profile__main-social-email-modal-form">
+                            <input
+                              class="os-modal-profile__main-social-email-modal-form-input"
+                              type="email"
+                              name="email"
+                              placeholder="your@email.com"
+                              required
+                            />
+                            <button
+                              class="os-modal-profile__main-social-email-modal-form-submit"
+                            ></button>
+                          </form>
+                        </div>
                       </div>
                     </div>
 
