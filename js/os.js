@@ -402,3 +402,41 @@ osModals.forEach((modal) => {
     updatePosition();
   });
 });
+
+/// profile
+
+const profileMain = document.querySelector('.os-modal-profile__main');
+const profilePages = document.querySelectorAll('.os-modal-profile__page');
+
+if (profileMain) {
+  profileMain.addEventListener('click', (event) => {
+    const isRefarallBtn = event.target.classList.contains('os-modal-profile__main-referral-button');
+
+    if (isRefarallBtn) {
+      const profilePage = document.querySelector('.os-modal-profile__page:nth-child(3)');
+      if (profilePage) {
+        profileMain.classList.add('hidden');
+        profilePage.classList.remove('hidden');
+      }
+    }
+  });
+}
+
+profilePages.forEach((profilePage) => {
+  profilePage.addEventListener('click', (event) => {
+    const isBackButton = event.target.classList.contains('os-modal-profile__page-back-button');
+    const isCopyButton = event.target.classList.contains('os-modal-profile__page-codes-item-copy-button');
+
+    if (isBackButton) {
+      if (profileMain) profileMain.classList.remove('hidden');
+      event.currentTarget.classList.add('hidden');
+    }
+
+
+    if (isCopyButton) {
+      const codesItemEl = event.target.closest('.os-modal-profile__page-codes-item');
+      const codeEl = codesItemEl.querySelector('.os-modal-profile__page-codes-item-code');
+      navigator.clipboard.writeText(codeEl.textContent);
+    }
+  });
+});
