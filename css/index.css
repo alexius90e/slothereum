@@ -877,6 +877,169 @@ img {
   border-radius: 20px;
   background: url(../assets/os/arrow-up-right.svg) center/16px no-repeat;
 }
+.os-modal-profile__page-back {
+  position: relative;
+  min-height: 124px;
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow: hidden;
+  border-radius: 12px;
+  margin: 0 0 16px;
+}
+.os-modal-profile__page-back-banner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+.os-modal-profile__page-back-banner-image {
+  display: block;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.os-modal-profile__page-back-button {
+  position: relative;
+  z-index: 10;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 6px 10px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 98%;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
+  background-color: rgba(32, 32, 34, 0.8);
+  cursor: pointer;
+}
+.os-modal-profile__page-back-button::before {
+  content: "";
+  display: inline-block;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  width: 16px;
+  aspect-ratio: 1/1;
+  border-radius: 20px;
+  background: url(../assets/os/arrow-left.svg) center/cover no-repeat;
+}
+.os-modal-profile__page-brief {
+  padding: 16px;
+  border-radius: 12px;
+  background-color: #202022;
+}
+.os-modal-profile__page-brief-title {
+  margin: 0 0 12px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 120%;
+  color: #fff;
+}
+.os-modal-profile__page-brief-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+  margin: 0 0 10px;
+  padding-left: 20px;
+}
+.os-modal-profile__page-brief-list-item {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 120%;
+  color: #fff;
+}
+.os-modal-profile__page-brief-social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 8px;
+}
+.os-modal-profile__page-brief-social-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 calc(50% - 4px);
+          flex: 0 0 calc(50% - 4px);
+  max-width: calc(50% - 4px);
+  padding: 8px 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 8px;
+  background-color: #28282b;
+}
+.os-modal-profile__page-brief-social-button::after {
+  content: "";
+  display: block;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  width: 18px;
+  aspect-ratio: 1/1;
+  background-color: #ffffff;
+  border-radius: 20px;
+}
+.os-modal-profile__page-brief-social-button.active::after {
+  background: url(../assets/os/check.svg) center/10px no-repeat;
+  background-color: #029102;
+}
+.os-modal-profile__page-brief-social-button-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  width: 34px;
+  aspect-ratio: 1/1;
+  margin-right: 10px;
+  border-radius: 34px;
+  background-color: #1363dc;
+}
+.os-modal-profile__page-brief-social-button-icon-image {
+  display: block;
+  width: 20px;
+  aspect-ratio: 1/1;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.os-modal-profile__page-brief-social-button-text {
+  margin-right: 6px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 120%;
+  color: #fff;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
 
 .os-body {
   position: fixed;
