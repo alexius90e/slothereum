@@ -12,7 +12,7 @@
   <body class="noscroll">
     <main class="main">
       <div class="os-body">
-        <section class="os-cap ">
+        <section class="os-cap hidden">
           <figure class="os-cap__charcter">
             <img class="os-cap__charcter-image" src="./assets/character.png" alt="character" />
           </figure>
@@ -267,12 +267,12 @@
           </div>
         </section>
 
-        <section class="os hidden">
+        <section class="os">
           <div class="os__main">
             <div class="os__container">
               <div class="os__main-content">
                 <div class="os__main-apps">
-                  <div class="os__main-app">
+                  <div class="os__main-app" data-target="profile">
                     <figure class="os__main-app-icon">
                       <img
                         class="os__main-app-icon-image"
@@ -385,16 +385,101 @@
               </div>
             </div>
           </div>
+
+          <div class="os-modal os-modal-profile" data-modal="profile">
+            <div class="os-modal__body">
+              <div class="os-modal__header">
+                <div class="os-modal__header-title">Profile</div>
+                <div class="os-modal__header-close"></div>
+              </div>
+
+              <div class="os-modal__wrapper">
+                <div class="os-modal__content">
+                  <div class="os-modal-profile__main">
+                    <figure class="os-modal-profile__main-banner">
+                      <img
+                        class="os-modal-profile__main-banner-image"
+                        src="./assets/os/profile-main-banner.jpg"
+                        alt="profile"
+                      />
+                      <figcaption class="os-modal-profile__main-banner-id">ID: 454545</figcaption>
+                    </figure>
+
+                    <h5 class="os-modal-profile__main-title">Authorization method</h5>
+
+                    <div class="os-modal-profile__main-description">
+                      Crypto ipsum bitcoin ethereum dogecoin litecoin. EOS waves bitcoin dogecoin
+                      solana.
+                    </div>
+
+                    <div class="os-modal-profile__main-social">
+                      <div class="os-modal-profile__main-social-button active" role="button">
+                        <div class="os-modal-profile__main-social-button-name">Telegram</div>
+                        <figure class="os-modal-profile__main-social-button-figure">
+                          <img
+                            class="os-modal-profile__main-social-button-figure-image"
+                            src="./assets/os/profile-main-button.jpg"
+                            alt="image"
+                          />
+                        </figure>
+                      </div>
+
+                      <div class="os-modal-profile__main-social-button" role="button">
+                        <div class="os-modal-profile__main-social-button-name">Twitter</div>
+                        <figure class="os-modal-profile__main-social-button-figure">
+                          <img
+                            class="os-modal-profile__main-social-button-figure-image"
+                            src="./assets/os/profile-main-button.jpg"
+                            alt="image"
+                          />
+                        </figure>
+                      </div>
+
+                      <div class="os-modal-profile__main-social-button" role="button">
+                        <div class="os-modal-profile__main-social-button-name">E-mail</div>
+                        <figure class="os-modal-profile__main-social-button-figure">
+                          <img
+                            class="os-modal-profile__main-social-button-figure-image"
+                            src="./assets/os/profile-main-button.jpg"
+                            alt="image"
+                          />
+                        </figure>
+                      </div>
+
+                      <div class="os-modal-profile__main-social-button" role="button">
+                        <div class="os-modal-profile__main-social-button-name">Connect wallet</div>
+                        <figure class="os-modal-profile__main-social-button-figure">
+                          <img
+                            class="os-modal-profile__main-social-button-figure-image"
+                            src="./assets/os/profile-main-button.jpg"
+                            alt="image"
+                          />
+                        </figure>
+                      </div>
+                    </div>
+
+                    <div class="os-modal-profile__main-referral">
+                      <button class="os-modal-profile__main-referral-button">
+                        <span class="os-modal-profile__main-referral-button-text">
+                          Referral program
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
 
-        <section class="os-modal hidden">
+        <div class="os-modal hidden">
           <div class="os-modal__body">
             <div class="os-modal__header">
               <div class="os-modal__header-title">memes fold</div>
               <div class="os-modal__header-close"></div>
             </div>
           </div>
-        </section>
+        </div>
       </div>
     </main>
 

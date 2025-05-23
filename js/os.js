@@ -8,6 +8,7 @@ const osSections = {
   swipeLogin: 'swipe-login',
   os: 'os',
   osModal: 'os-modal',
+  osModalProfile: 'os-modal-profile',
 };
 
 const showOsSection = (sectionClassName) => {
@@ -303,9 +304,15 @@ if (osTimeEl) setInterval(() => updateOsTime(), 10000);
 
 const osMainApps = document.querySelectorAll('.os__main-app');
 
+const osMainAppsTargets = {
+  profile: 'profile',
+};
+
 osMainApps.forEach((osMainApp) => {
   osMainApp.addEventListener('click', (event) => {
-    showOsSection(osSections.osModal);
+    const targetModalName = event.currentTarget.dataset.target;
+
+    if (targetModalName === osMainAppsTargets.profile) showOsSection(osSections.osModalProfile);
   });
 });
 
@@ -391,7 +398,7 @@ osModals.forEach((modal) => {
     isDragging = false;
   }
 
-  window.addEventListener('resize', (event) => {
+  window.addEventListener('resize', () => {
     updatePosition();
   });
 });
