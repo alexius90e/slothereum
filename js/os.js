@@ -9,6 +9,7 @@ const osSections = {
   os: 'os',
   osModal: 'os-modal',
   osModalProfile: 'os-modal-profile',
+  osModalWallet: 'os-modal-wallet',
 };
 
 const showOsSection = (sectionClassName) => {
@@ -306,6 +307,7 @@ const osMainApps = document.querySelectorAll('.os__main-app');
 
 const osMainAppsTargets = {
   profile: 'profile',
+  wallet: 'wallet',
 };
 
 osMainApps.forEach((osMainApp) => {
@@ -313,6 +315,7 @@ osMainApps.forEach((osMainApp) => {
     const targetModalName = event.currentTarget.dataset.target;
 
     if (targetModalName === osMainAppsTargets.profile) showOsSection(osSections.osModalProfile);
+    if (targetModalName === osMainAppsTargets.wallet) showOsSection(osSections.osModalWallet);
   });
 });
 

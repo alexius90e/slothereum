@@ -12,7 +12,7 @@
   <body class="noscroll">
     <main class="main">
       <div class="os-body">
-        <section class="os-cap ">
+        <section class="os-cap hidden">
           <figure class="os-cap__charcter">
             <img class="os-cap__charcter-image" src="./assets/character.png" alt="character" />
           </figure>
@@ -267,7 +267,7 @@
           </div>
         </section>
 
-        <section class="os hidden">
+        <section class="os">
           <div class="os__main">
             <div class="os__container">
               <div class="os__main-content">
@@ -294,7 +294,7 @@
                     <div class="os__main-app-text">Manifesto.txt</div>
                   </div>
 
-                  <div class="os__main-app">
+                  <div class="os__main-app" data-target="wallet">
                     <figure class="os__main-app-icon">
                       <img
                         class="os__main-app-icon-image"
@@ -885,6 +885,49 @@
                         </div>
                       </div>
                     </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="os-modal os-modal-wallet" data-modal="wallet">
+            <div class="os-modal__body">
+              <div class="os-modal__header">
+                <div class="os-modal__header-title">Wallet</div>
+                <div class="os-modal__header-close"></div>
+              </div>
+
+              <div class="os-modal__wrapper">
+                <div class="os-modal__content">
+                  <div class="os-modal-wallet__main">
+                    <div class="os-modal-wallet__main-info">
+                      <div class="os-modal-wallet__main-info-name">
+                        CustomName #1
+                      </div>
+
+                      <div class="os-modal-wallet__main-info-token">
+                        <div  class="os-modal-wallet__main-info-token-code">
+                          0xe27e ··· c886
+                        </div>
+                        <button class="os-modal-wallet__main-info-token-copy"></button>
+                      </div>
+
+                      <div class="os-modal-wallet__main-info-crypto">
+                        42 ETH
+                      </div>
+
+                      <div class="os-modal-wallet__main-info-money">$5516.661</div>
+
+                      <div class="os-modal-wallet__main-info-more">
+                        <button class="os-modal-wallet__main-info-more-button"></button>
+                      </div>
+
+                      <div class="os-modal-wallet__main-info-controls">
+                        <button class="os-modal-wallet__main-info-controls-receive"></button>
+                        <button class="os-modal-wallet__main-info-controls-send"></button>
+                      </div>
+                  </div>
                   </div>
                 </div>
               </div>

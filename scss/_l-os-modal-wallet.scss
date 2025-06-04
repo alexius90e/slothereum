@@ -1,0 +1,155 @@
+.os-modal-wallet {
+  & .os-modal__body {
+    position: relative;
+    width: 390px;
+    height: 726px;
+    overflow: hidden;
+  }
+
+  & .os-modal__header-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+
+    &::before {
+      content: '';
+      display: inline-block;
+      flex: 0 0 auto;
+      width: 18px;
+      height: 18px;
+      border-radius: 20px;
+      background-color: #6cf100;
+    }
+  }
+
+  & .os-modal__content {
+    height: 100%;
+  }
+
+  &__main {
+    &-info {
+      position: relative;
+      padding: 20px;
+      box-sizing: border-box;
+      overflow: hidden;
+      border-radius: 16px;
+      background: url(../assets/os/wallet-main-info-bg.jpg) right bottom / cover no-repeat;
+      background-color: rgba($color: #ffffff, $alpha: 0.1);
+
+      &-name {
+        margin: 0 0 4px;
+        font-family: 'IBM Plex Sans', sans-serif;
+        font-weight: 700;
+        font-size: 16px;
+        color: #fff;
+      }
+
+      &-token {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        width: fit-content;
+        margin: 0 0 10px;
+        padding: 4px;
+        border: 1px solid rgba($color: #ffffff, $alpha: 0.2);
+        border-radius: 4px;
+        background-color: rgba($color: #ffffff, $alpha: 0.1);
+
+        &-code {
+          font-family: 'IBM Plex Sans', sans-serif;
+          font-weight: 500;
+          font-size: 14px;
+          color: #fff;
+        }
+
+        &-copy {
+          display: inline-block;
+          width: 16px;
+          padding: 0;
+          box-sizing: border-box;
+          aspect-ratio: 1 / 1;
+          border: none;
+          background: url(../assets/os/copy.svg) center / cover no-repeat;
+          cursor: pointer;
+        }
+      }
+
+      &-crypto {
+        margin: 0 0 2px;
+        font-family: 'IBM Plex Sans', sans-serif;
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 100%;
+        color: #fff;
+      }
+
+      &-money {
+        font-family: 'IBM Plex Sans', sans-serif;
+        font-weight: 600;
+        font-size: 14px;
+        color: #fff;
+        opacity: 0.6;
+      }
+
+      &-more {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        width: fit-content;
+
+        &-button {
+          display: inline-block;
+          width: 28px;
+          padding: 0;
+          box-sizing: border-box;
+          aspect-ratio: 1 / 1;
+          border: none;
+          border-radius: 8px;
+          background: url(../assets/os/more.svg) center / 18px no-repeat;
+          background-color: rgba(32, 42, 57, 0.5);
+          backdrop-filter: blur(20px);
+          cursor: pointer;
+        }
+      }
+
+      &-controls {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        width: fit-content;
+
+        &-receive,
+        &-send {
+          display: inline-block;
+          width: 28px;
+          padding: 0;
+          box-sizing: border-box;
+          aspect-ratio: 1 / 1;
+          border: none;
+          border-radius: 8px;
+          background-position: center;
+          background-size: 18px;
+          background-repeat: no-repeat;
+          background-color: rgba(32, 42, 57, 0.5);
+          backdrop-filter: blur(20px);
+          cursor: pointer;
+        }
+
+        &-receive {
+          background-image: url(../assets/os/under.svg);
+        }
+
+        &-send {
+          background-image: url(../assets/os/up.svg);
+        }
+      }
+    }
+  }
+}

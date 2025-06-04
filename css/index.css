@@ -1604,6 +1604,173 @@ img {
           filter: brightness(20%);
 }
 
+.os-modal-wallet .os-modal__body {
+  position: relative;
+  width: 390px;
+  height: 726px;
+  overflow: hidden;
+}
+.os-modal-wallet .os-modal__header-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 6px;
+}
+.os-modal-wallet .os-modal__header-title::before {
+  content: "";
+  display: inline-block;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  width: 18px;
+  height: 18px;
+  border-radius: 20px;
+  background-color: #6cf100;
+}
+.os-modal-wallet .os-modal__content {
+  height: 100%;
+}
+.os-modal-wallet__main-info {
+  position: relative;
+  padding: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow: hidden;
+  border-radius: 16px;
+  background: url(../assets/os/wallet-main-info-bg.jpg) right bottom/cover no-repeat;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.os-modal-wallet__main-info-name {
+  margin: 0 0 4px;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: #fff;
+}
+.os-modal-wallet__main-info-token {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 0 10px;
+  padding: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.os-modal-wallet__main-info-token-code {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  color: #fff;
+}
+.os-modal-wallet__main-info-token-copy {
+  display: inline-block;
+  width: 16px;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  aspect-ratio: 1/1;
+  border: none;
+  background: url(../assets/os/copy.svg) center/cover no-repeat;
+  cursor: pointer;
+}
+.os-modal-wallet__main-info-crypto {
+  margin: 0 0 2px;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 100%;
+  color: #fff;
+}
+.os-modal-wallet__main-info-money {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: #fff;
+  opacity: 0.6;
+}
+.os-modal-wallet__main-info-more {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.os-modal-wallet__main-info-more-button {
+  display: inline-block;
+  width: 28px;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  aspect-ratio: 1/1;
+  border: none;
+  border-radius: 8px;
+  background: url(../assets/os/more.svg) center/18px no-repeat;
+  background-color: rgba(32, 42, 57, 0.5);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  cursor: pointer;
+}
+.os-modal-wallet__main-info-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.os-modal-wallet__main-info-controls-receive, .os-modal-wallet__main-info-controls-send {
+  display: inline-block;
+  width: 28px;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  aspect-ratio: 1/1;
+  border: none;
+  border-radius: 8px;
+  background-position: center;
+  background-size: 18px;
+  background-repeat: no-repeat;
+  background-color: rgba(32, 42, 57, 0.5);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  cursor: pointer;
+}
+.os-modal-wallet__main-info-controls-receive {
+  background-image: url(../assets/os/under.svg);
+}
+.os-modal-wallet__main-info-controls-send {
+  background-image: url(../assets/os/up.svg);
+}
+
 .os-body {
   position: fixed;
   top: 0;
