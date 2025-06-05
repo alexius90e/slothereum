@@ -1633,8 +1633,78 @@ img {
   border-radius: 20px;
   background-color: #6cf100;
 }
+.os-modal-wallet .os-modal__wrapper {
+  margin: 18px 0;
+  padding: 0 15px;
+}
 .os-modal-wallet .os-modal__content {
   height: 100%;
+}
+.os-modal-wallet__heading {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0 80px;
+}
+.os-modal-wallet__heading-title {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 600;
+  font-size: 28px;
+  color: #fff;
+}
+.os-modal-wallet__heading-back {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 10;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2px;
+  padding: 6px 10px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 98%;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
+  background-color: rgba(32, 32, 34, 0.8);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  cursor: pointer;
+}
+.os-modal-wallet__heading-back::before {
+  content: "";
+  display: inline-block;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  width: 16px;
+  aspect-ratio: 1/1;
+  border-radius: 20px;
+  background: url(../assets/os/arrow-left.svg) center/cover no-repeat;
+}
+.os-modal-wallet__main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 16px;
 }
 .os-modal-wallet__main-info {
   position: relative;
@@ -1651,7 +1721,7 @@ img {
   font-family: "IBM Plex Sans", sans-serif;
   font-weight: 700;
   font-size: 16px;
-  color: #fff;
+  color: #ffffff;
 }
 .os-modal-wallet__main-info-token {
   display: -webkit-box;
@@ -1674,7 +1744,7 @@ img {
   font-family: "IBM Plex Sans", sans-serif;
   font-weight: 500;
   font-size: 14px;
-  color: #fff;
+  color: #ffffff;
 }
 .os-modal-wallet__main-info-token-copy {
   display: inline-block;
@@ -1693,13 +1763,13 @@ img {
   font-weight: 700;
   font-size: 40px;
   line-height: 100%;
-  color: #fff;
+  color: #ffffff;
 }
 .os-modal-wallet__main-info-money {
   font-family: "IBM Plex Sans", sans-serif;
   font-weight: 600;
   font-size: 14px;
-  color: #fff;
+  color: #ffffff;
   opacity: 0.6;
 }
 .os-modal-wallet__main-info-more {
@@ -1769,6 +1839,337 @@ img {
 }
 .os-modal-wallet__main-info-controls-send {
   background-image: url(../assets/os/up.svg);
+}
+.os-modal-wallet__main-network-heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 6px;
+  margin: 0 0 16px;
+}
+.os-modal-wallet__main-network-heading-icon {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+}
+.os-modal-wallet__main-network-heading-icon-image {
+  display: block;
+  max-width: 100%;
+  width: 16px;
+  height: auto;
+}
+.os-modal-wallet__main-network-heading-title {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: #ffffff;
+}
+.os-modal-wallet__main-network-contract {
+  padding: 12px;
+  border-radius: 12px;
+  background: url(../assets/os/gradient-bg.jpg) center no-repeat;
+  background-size: 130%;
+}
+.os-modal-wallet__main-network-contract-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 7px;
+  margin: 0 0 10px;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 120%;
+  color: #ffffff;
+}
+.os-modal-wallet__main-network-contract-title:before {
+  content: "";
+  display: block;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  width: 3px;
+  border-radius: 16px;
+  background-color: #5ccc00;
+}
+.os-modal-wallet__main-network-contract-subtitle {
+  margin: 0 0 8px;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 98%;
+  color: #ffffff;
+}
+.os-modal-wallet__main-network-contract-details {
+  position: relative;
+}
+.os-modal-wallet__main-network-contract-details-input {
+  display: inline-block;
+  width: 100%;
+  padding: 15px 16px;
+  padding-right: 80px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 98%;
+  color: #d5d5d5;
+  border: 1px solid #3a3a3d;
+  border-radius: 14px;
+  background-color: #17171a;
+}
+.os-modal-wallet__main-network-contract-details-paste {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  display: inline-block;
+  padding: 8px 6px;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 98%;
+  color: #d1d1d1;
+  border: none;
+  border-radius: 8px;
+  background-color: #3a3a3d;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  cursor: pointer;
+}
+.os-modal-wallet__main-network-tokens {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 16px;
+  margin: 16px 0 0;
+}
+.os-modal-wallet__main-network-tokens-hidden {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 16px;
+}
+.os-modal-wallet__main-network-tokens-hidden-more {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.os-modal-wallet__main-network-tokens-hidden-more-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-weight: 600;
+  font-size: 14px;
+  color: #fff;
+  border: none;
+  background-color: rgba(255, 255, 255, 0);
+  cursor: pointer;
+}
+.os-modal-wallet__main-network-tokens-hidden-more-button::after {
+  content: "";
+  display: block;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  width: 16px;
+  aspect-ratio: 1/1;
+  background: url(../assets/os/caret-down.svg);
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  -webkit-transition: -webkit-transform ease-out 0.1s;
+  transition: -webkit-transform ease-out 0.1s;
+  transition: transform ease-out 0.1s;
+  transition: transform ease-out 0.1s, -webkit-transform ease-out 0.1s;
+}
+.os-modal-wallet__main-network-tokens-hidden.active .os-modal-wallet__main-network-tokens-hidden-more-button::after {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+.os-modal-wallet__main-network-tokens-hidden-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 16px;
+  display: none;
+}
+.os-modal-wallet__main-network-tokens-hidden.active .os-modal-wallet__main-network-tokens-hidden-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.os-modal-wallet__main-network-token {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  border-radius: 16px;
+  background-color: #202022;
+}
+.os-modal-wallet__main-network-token-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  margin: 0;
+}
+.os-modal-wallet__main-network-token-icon-image {
+  display: block;
+  max-width: 100%;
+  width: 40px;
+  height: auto;
+}
+.os-modal-wallet__main-network-token-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 10px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+.os-modal-wallet__main-network-token-info-name {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: #ffffff;
+}
+.os-modal-wallet__main-network-token-info-entity {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  color: #ffffff;
+}
+.os-modal-wallet__main-network-token-info-cost {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: #ffffff;
+  text-align: right;
+}
+.os-modal-wallet__main-network-token-info-changes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  text-align: right;
+  color: #ffffff;
+}
+.os-modal-wallet__main-network-token-info-changes:before {
+  display: inline-block;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  width: 16px;
+  aspect-ratio: 1/1;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.os-modal-wallet__main-network-token-info-changes-up {
+  color: #50af03;
+}
+.os-modal-wallet__main-network-token-info-changes-up:before {
+  content: "";
+  background-image: url(../assets/os/course-up.svg);
+}
+.os-modal-wallet__main-garry {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 124px;
+  padding: 12px;
+  padding-left: 130px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 12px;
+  background: url(../assets/os/gradient-bg.jpg) center no-repeat;
+  background-size: 130%;
+}
+.os-modal-wallet__main-garry-figure {
+  position: absolute;
+  left: 8px;
+  bottom: 0;
+  z-index: 1;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0;
+}
+.os-modal-wallet__main-garry-figure-image {
+  display: block;
+  max-width: 100%;
+  width: 164px;
+  height: auto;
+}
+.os-modal-wallet__main-garry-title {
+  position: relative;
+  z-index: 10;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 120%;
+  text-align: center;
+  color: #fff;
 }
 
 .os-body {

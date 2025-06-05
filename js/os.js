@@ -466,3 +466,35 @@ profilePages.forEach((profilePage) => {
     }
   });
 });
+
+/// wallet
+
+const osWalletHiddenEls = document.querySelectorAll('.os-modal-wallet__main-network-tokens-hidden');
+
+osWalletHiddenEls.forEach((osWalletHiddenEl) => {
+  const moreButtonClassName = 'os-modal-wallet__main-network-tokens-hidden-more-button';
+  const moreButtonEl = osWalletHiddenEl.querySelector(`.${moreButtonClassName}`);
+  const isActive = osWalletHiddenEl.classList.contains('active');
+
+  if (moreButtonEl) {
+    if (isActive) {
+      moreButtonEl.textContent = 'Hide all tokens';
+    } else {
+      moreButtonEl.textContent = 'Show all tokens';
+    }
+  }
+
+  osWalletHiddenEl.addEventListener('click', (event) => {
+    const isActive = event.currentTarget.classList.contains('active');
+    const isMoreButton = event.target.classList.contains(`${moreButtonClassName}`);
+
+    if (isMoreButton) {
+      if (isActive) {
+        event.target.textContent = 'Show all tokens';
+      } else {
+        event.target.textContent = 'Hide all tokens';
+      }
+      event.currentTarget.classList.toggle('active');
+    }
+  });
+});
