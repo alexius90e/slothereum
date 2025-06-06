@@ -1260,4 +1260,130 @@
       }
     }
   }
+
+  &__address {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+
+    & .os-modal-wallet__heading {
+      padding: 0;
+      margin-bottom: 16px;
+
+      &-title {
+        flex: 1 1 auto;
+        padding: 0;
+        text-align: left;
+      }
+    }
+
+    &-content {
+      margin: 0 0 34px;
+      padding: 16px;
+      border-radius: 16px;
+      background-color: #202022;
+
+      &-title {
+        margin: 0 0 8px;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 98%;
+        color: #fff;
+        text-align: center;
+      }
+
+      &-token {
+        margin: 0 0 16px;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 170%;
+        text-align: center;
+        color: #fff;
+        text-align: center;
+      }
+
+      &-qr {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 0 16px;
+
+        &-image {
+          display: block;
+          max-width: 100%;
+          height: auto;
+        }
+      }
+
+      &-copy {
+        margin: 0 0 8px;
+
+        &-button {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 16px;
+          padding: 11px 32px;
+          width: 100%;
+          box-sizing: border-box;
+          font-weight: 500;
+          font-size: 12px;
+          line-height: 98%;
+          color: #fff;
+          border: none;
+          border-radius: 14px;
+          background-color: #106af3;
+          cursor: pointer;
+
+          &::after {
+            content: '';
+            display: block;
+            flex: 0 0 auto;
+            width: 24px;
+            aspect-ratio: 1 / 1;
+            background: url(../assets/os/copy.svg) center / cover no-repeat;
+          }
+        }
+      }
+
+      &-disclaimer {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 120%;
+        text-align: center;
+        color: #fff;
+      }
+    }
+
+    &-back {
+      display: flex;
+      align-items: flex-end;
+      flex: 1 1 auto;
+
+      &-wrapper {
+        flex: 1 1 auto;
+        padding: 20px 15px 0;
+        margin: 0 -15px;
+        border-top: 1px solid #3c3c40;
+      }
+
+      &-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+        padding: 17px 32px;
+        width: 100%;
+        box-sizing: border-box;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 98%;
+        color: #fff;
+        border: none;
+        border-radius: 14px;
+        background-color: #3a3a3d;
+        cursor: pointer;
+      }
+    }
+  }
 }

@@ -3007,6 +3007,154 @@ img {
   -webkit-filter: brightness(0) saturate(100%) invert(70%) sepia(78%) saturate(4225%) hue-rotate(56deg) brightness(93%) contrast(98%);
           filter: brightness(0) saturate(100%) invert(70%) sepia(78%) saturate(4225%) hue-rotate(56deg) brightness(93%) contrast(98%);
 }
+.os-modal-wallet__address {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100%;
+}
+.os-modal-wallet__address .os-modal-wallet__heading {
+  padding: 0;
+  margin-bottom: 16px;
+}
+.os-modal-wallet__address .os-modal-wallet__heading-title {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  padding: 0;
+  text-align: left;
+}
+.os-modal-wallet__address-content {
+  margin: 0 0 34px;
+  padding: 16px;
+  border-radius: 16px;
+  background-color: #202022;
+}
+.os-modal-wallet__address-content-title {
+  margin: 0 0 8px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 98%;
+  color: #fff;
+  text-align: center;
+}
+.os-modal-wallet__address-content-token {
+  margin: 0 0 16px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 170%;
+  text-align: center;
+  color: #fff;
+  text-align: center;
+}
+.os-modal-wallet__address-content-qr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 0 16px;
+}
+.os-modal-wallet__address-content-qr-image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.os-modal-wallet__address-content-copy {
+  margin: 0 0 8px;
+}
+.os-modal-wallet__address-content-copy-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 16px;
+  padding: 11px 32px;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 98%;
+  color: #fff;
+  border: none;
+  border-radius: 14px;
+  background-color: #106af3;
+  cursor: pointer;
+}
+.os-modal-wallet__address-content-copy-button::after {
+  content: "";
+  display: block;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  width: 24px;
+  aspect-ratio: 1/1;
+  background: url(../assets/os/copy.svg) center/cover no-repeat;
+}
+.os-modal-wallet__address-content-disclaimer {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 120%;
+  text-align: center;
+  color: #fff;
+}
+.os-modal-wallet__address-back {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+.os-modal-wallet__address-back-wrapper {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  padding: 20px 15px 0;
+  margin: 0 -15px;
+  border-top: 1px solid #3c3c40;
+}
+.os-modal-wallet__address-back-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 16px;
+  padding: 17px 32px;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 98%;
+  color: #fff;
+  border: none;
+  border-radius: 14px;
+  background-color: #3a3a3d;
+  cursor: pointer;
+}
 
 .os-body {
   position: fixed;
