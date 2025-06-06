@@ -891,7 +891,7 @@
             </div>
           </div>
 
-          <div class="os-modal os-modal-wallet" data-modal="wallet">
+          <div class="os-modal os-modal-wallet hidden" data-modal="wallet">
             <div class="os-modal__body">
               <div class="os-modal__header">
                 <div class="os-modal__header-title">Wallet</div>
@@ -900,7 +900,7 @@
 
               <div class="os-modal__wrapper">
                 <div class="os-modal__content">
-                  <div class="os-modal-wallet__main hidden">
+                  <div class="os-modal-wallet__main">
                     <div class="os-modal-wallet__main-info">
                       <div class="os-modal-wallet__main-info-name">CustomName #1</div>
 
@@ -2214,7 +2214,7 @@
                     </div>
                   </div>
 
-                  <div class="os-modal-wallet__address">
+                  <div class="os-modal-wallet__address hidden">
                     <div class="os-modal-wallet__heading">
                       <div class="os-modal-wallet__heading-title">Recieve</div>
                     </div>
@@ -2249,6 +2249,221 @@
                       <div class="os-modal-wallet__address-back-wrapper">
                         <button class="os-modal-wallet__address-back-button">Back</button>
                       </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="os-modal os-modal-swap" data-modal="swap">
+            <div class="os-modal__body">
+              <div class="os-modal__header">
+                <div class="os-modal__header-title">Swap</div>
+                <div class="os-modal__header-close"></div>
+              </div>
+
+              <div class="os-modal__wrapper">
+                <div class="os-modal__content">
+                  <div class="os-modal-swap__main">
+                    <div class="os-modal-swap__main-details">
+                      <div class="os-modal-swap__main-details-title">Contract addres</div>
+
+                      <div class="os-modal-swap__main-details-wrapper">
+                        <input
+                          class="os-modal-swap__main-details-input"
+                          type="text"
+                          value="ex 2zMMhcVQEXD...E8vd1gnBouauv"
+                        />
+                        <button class="os-modal-swap__main-details-paste">Paste</button>
+                      </div>
+                    </div>
+
+                    <div class="os-modal-swap__main-swap">
+                      <div class="os-modal-swap__main-swap-item">
+                        <div class="os-modal-swap__main-swap-item-title">Balance: 0</div>
+
+                        <div class="os-modal-swap__main-swap-item-control">
+                          <input
+                            class="os-modal-swap__main-swap-item-control-input"
+                            type="text"
+                            value="0"
+                          />
+                          <div class="os-modal-swap__main-swap-item-control-label">
+                            <figure class="os-modal-swap__main-swap-item-control-label-icon">
+                              <img
+                                class="os-modal-swap__main-swap-item-control-label-icon-image"
+                                src="./assets/os/ethereum-eth-1.svg"
+                                alt="ethereum"
+                              />
+                            </figure>
+                            <div class="os-modal-swap__main-swap-item-control-label-name">ETH</div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="os-modal-swap__main-swap-reverse">
+                        <button class="os-modal-swap__main-swap-reverse-button"></button>
+                      </div>
+
+                      <div class="os-modal-swap__main-swap-item">
+                        <div class="os-modal-swap__main-swap-item-title">Balance: 0</div>
+
+                        <div class="os-modal-swap__main-swap-item-control">
+                          <input
+                            class="os-modal-swap__main-swap-item-control-input"
+                            type="text"
+                            value="0"
+                          />
+                          <div class="os-modal-swap__main-swap-item-control-label">
+                            <figure class="os-modal-swap__main-swap-item-control-label-icon">
+                              <img
+                                class="os-modal-swap__main-swap-item-control-label-icon-image"
+                                src="./assets/os/ethereum-eth-1.svg"
+                                alt="ethereum"
+                              />
+                            </figure>
+                            <div class="os-modal-swap__main-swap-item-control-label-name">ETH</div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="os-modal-swap__main-swap-quantity">
+                        <button class="os-modal-swap__main-swap-quantity-button">10%</button>
+                        <button class="os-modal-swap__main-swap-quantity-button">25%</button>
+                        <button class="os-modal-swap__main-swap-quantity-button">50%</button>
+                        <button class="os-modal-swap__main-swap-quantity-button">MAX</button>
+                      </div>
+                    </div>
+
+                    <div class="os-modal-swap__main-info">
+                      <div class="os-modal-swap__main-info-item">
+                        <div class="os-modal-swap__main-info-item-heading">
+                          <div class="os-modal-swap__main-info-item-heading-title">Price</div>
+                          <div class="os-modal-swap__main-info-item-heading-tag">+15%</div>
+                        </div>
+                        <div class="os-modal-swap__main-info-item-value">0.0₈210 ETH</div>
+                        <div class="os-modal-swap__main-info-item-param">
+                          <div class="os-modal-swap__main-info-item-param-name">Liquidity</div>
+                          <div class="os-modal-swap__main-info-item-param-value">$ 32k</div>
+                        </div>
+                      </div>
+
+                      <div class="os-modal-swap__main-info-item">
+                        <div class="os-modal-swap__main-info-item-heading">
+                          <div class="os-modal-swap__main-info-item-heading-title">Market Cap</div>
+                        </div>
+                        <div class="os-modal-swap__main-info-item-value">0.0₈210 ETH</div>
+                        <div class="os-modal-swap__main-info-item-param">
+                          <div class="os-modal-swap__main-info-item-param-name">Blockchain</div>
+                          <div class="os-modal-swap__main-info-item-param-value">ETH</div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="os-modal-swap__main-continue">
+                      <button class="os-modal-swap__main-continue-button" disabled>Continue</button>
+                    </div>
+                  </div>
+
+                  <div class="os-modal-swap__main hidden">
+                    <div class="os-modal-swap__main-details">
+                      <div class="os-modal-swap__main-details-title">Contract addres</div>
+
+                      <div class="os-modal-swap__main-details-wrapper">
+                        <input
+                          class="os-modal-swap__main-details-input"
+                          type="text"
+                          value="ex 2zMMhcVQEXD...E8vd1gnBouauv"
+                        />
+                        <button class="os-modal-swap__main-details-paste">Paste</button>
+                      </div>
+                    </div>
+
+                    <div class="os-modal-swap__main-swap">
+                      <div class="os-modal-swap__main-swap-item">
+                        <div class="os-modal-swap__main-swap-item-title">Balance: 0</div>
+
+                        <div class="os-modal-swap__main-swap-item-control">
+                          <input
+                            class="os-modal-swap__main-swap-item-control-input"
+                            type="text"
+                            value="0"
+                          />
+                          <div class="os-modal-swap__main-swap-item-control-label">
+                            <figure class="os-modal-swap__main-swap-item-control-label-icon">
+                              <img
+                                class="os-modal-swap__main-swap-item-control-label-icon-image"
+                                src="./assets/os/ethereum-eth-1.svg"
+                                alt="ethereum"
+                              />
+                            </figure>
+                            <div class="os-modal-swap__main-swap-item-control-label-name">ETH</div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="os-modal-swap__main-swap-reverse">
+                        <button class="os-modal-swap__main-swap-reverse-button"></button>
+                      </div>
+
+                      <div class="os-modal-swap__main-swap-item">
+                        <div class="os-modal-swap__main-swap-item-title">Balance: 0</div>
+
+                        <div class="os-modal-swap__main-swap-item-control">
+                          <input
+                            class="os-modal-swap__main-swap-item-control-input"
+                            type="text"
+                            value="0"
+                          />
+                          <div class="os-modal-swap__main-swap-item-control-label">
+                            <figure class="os-modal-swap__main-swap-item-control-label-icon">
+                              <img
+                                class="os-modal-swap__main-swap-item-control-label-icon-image"
+                                src="./assets/os/ethereum-eth-1.svg"
+                                alt="ethereum"
+                              />
+                            </figure>
+                            <div class="os-modal-swap__main-swap-item-control-label-name">ETH</div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="os-modal-swap__main-swap-quantity">
+                        <button class="os-modal-swap__main-swap-quantity-button">10%</button>
+                        <button class="os-modal-swap__main-swap-quantity-button">25%</button>
+                        <button class="os-modal-swap__main-swap-quantity-button">50%</button>
+                        <button class="os-modal-swap__main-swap-quantity-button">MAX</button>
+                      </div>
+                    </div>
+
+                    <div class="os-modal-swap__main-info">
+                      <div class="os-modal-swap__main-info-item">
+                        <div class="os-modal-swap__main-info-item-heading">
+                          <div class="os-modal-swap__main-info-item-heading-title">Price</div>
+                          <div class="os-modal-swap__main-info-item-heading-tag">+15%</div>
+                        </div>
+                        <div class="os-modal-swap__main-info-item-value">0.0₈210 ETH</div>
+                        <div class="os-modal-swap__main-info-item-param">
+                          <div class="os-modal-swap__main-info-item-param-name">Liquidity</div>
+                          <div class="os-modal-swap__main-info-item-param-value">$ 32k</div>
+                        </div>
+                      </div>
+
+                      <div class="os-modal-swap__main-info-item">
+                        <div class="os-modal-swap__main-info-item-heading">
+                          <div class="os-modal-swap__main-info-item-heading-title">Market Cap</div>
+                        </div>
+                        <div class="os-modal-swap__main-info-item-value">0.0₈210 ETH</div>
+                        <div class="os-modal-swap__main-info-item-param">
+                          <div class="os-modal-swap__main-info-item-param-name">Blockchain</div>
+                          <div class="os-modal-swap__main-info-item-param-value">ETH</div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="os-modal-swap__main-continue">
+                      <button class="os-modal-swap__main-continue-button">Continue</button>
                     </div>
                   </div>
                 </div>

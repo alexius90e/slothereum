@@ -1322,7 +1322,7 @@
           display: flex;
           align-items: center;
           justify-content: center;
-          gap: 16px;
+          gap: 6px;
           padding: 11px 32px;
           width: 100%;
           box-sizing: border-box;
@@ -1339,7 +1339,7 @@
             content: '';
             display: block;
             flex: 0 0 auto;
-            width: 24px;
+            width: 18px;
             aspect-ratio: 1 / 1;
             background: url(../assets/os/copy.svg) center / cover no-repeat;
           }
