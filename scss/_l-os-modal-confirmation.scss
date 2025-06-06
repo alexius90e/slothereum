@@ -125,6 +125,10 @@
         &_blockchain &-value {
           font-weight: 400;
         }
+
+        &_address &-value {
+          word-break: break-all;
+        }
       }
     }
 

@@ -3050,6 +3050,7 @@ img {
   text-align: center;
   color: #fff;
   text-align: center;
+  word-break: break-all;
 }
 .os-modal-wallet__address-content-qr {
   display: -webkit-box;
@@ -3684,6 +3685,9 @@ img {
 }
 .os-modal-confirmation__main-details-item_blockchain .os-modal-confirmation__main-details-item-value {
   font-weight: 400;
+}
+.os-modal-confirmation__main-details-item_address .os-modal-confirmation__main-details-item-value {
+  word-break: break-all;
 }
 .os-modal-confirmation__main-buttons {
   display: -webkit-box;
