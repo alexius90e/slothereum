@@ -34,7 +34,8 @@
   }
 
   & .os-modal__wrapper {
-    margin: 18px 0;
+    position: relative;
+    margin: 20px 0;
     padding: 0 15px;
   }
 
@@ -517,6 +518,106 @@
         line-height: 120%;
         text-align: center;
         color: #fff;
+      }
+    }
+
+    &-alerts {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 999;
+      max-height: calc(100% - 45px);
+      box-sizing: border-box;
+      padding: 10px 20px 30px;
+      opacity: 1;
+      overflow: auto;
+      pointer-events: all;
+      scrollbar-color: #414142 rgba($color: #414142, $alpha: 0);
+      scrollbar-width: thin;
+
+      &-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+
+      &:has(&-wrapper:empty),
+      &:empty {
+        opacity: 0;
+        pointer-events: none;
+      }
+
+      &-item {
+        padding: 14px;
+        border-radius: 16px;
+        border-left: 16px solid #ffffff;
+        backdrop-filter: blur(30px);
+        box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.5);
+        background-color: #202022;
+
+        &_approve {
+          border-color: #7fff00;
+        }
+
+        &_error {
+          border-color: #ff3030;
+        }
+
+        &_info {
+          border-color: #3971ff;
+        }
+
+        &-title {
+          display: flex;
+          align-items: center;
+          gap: 6px;
+
+          margin: 0 0 6px;
+          font-weight: 700;
+          font-size: 18px;
+          line-height: 130%;
+          color: #fff;
+
+          &::after {
+            content: '';
+            display: block;
+            flex: 0 0 auto;
+            width: 24px;
+            aspect-ratio: 1 / 1;
+          }
+        }
+
+        &_approve &-title {
+          color: #7fff00;
+
+          &::after {
+            background-image: url(../assets/os/warning-approve.svg);
+          }
+        }
+
+        &_error &-title {
+          color: #ff3030;
+
+          &::after {
+            background-image: url(../assets/os/warning-error.svg);
+          }
+        }
+
+        &_info &-title {
+          color: #3971ff;
+
+          &::after {
+            background-image: url(../assets/os/warning-info.svg);
+          }
+        }
+
+        &-text {
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 160%;
+          color: #fff;
+        }
       }
     }
   }
