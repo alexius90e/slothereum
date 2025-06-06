@@ -2574,6 +2574,92 @@ img {
 .os-modal-wallet__transaction-history-list-item_sent .os-modal-wallet__transaction-history-list-item-details-expenses {
   color: #327ff3;
 }
+.os-modal-wallet__received-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 32px;
+}
+.os-modal-wallet__received-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.os-modal-wallet__received-icon-image {
+  display: block;
+  max-width: 100%;
+  width: 100px;
+  height: auto;
+}
+.os-modal-wallet__received-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 8px;
+  padding: 16px;
+  border-radius: 12px;
+  background-color: #202022;
+}
+.os-modal-wallet__received-details-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #2b2b2f;
+}
+.os-modal-wallet__received-details-item:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+.os-modal-wallet__received-details-item-name {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  font-weight: 400;
+  font-size: 14px;
+  color: #fff;
+}
+.os-modal-wallet__received-details-item-value {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 98%;
+  color: #fff;
+}
+.os-modal-wallet__received-details-item_received .os-modal-wallet__received-details-item-value, .os-modal-wallet__received-details-item_status .os-modal-wallet__received-details-item-value {
+  color: #50af03;
+}
+.os-modal-wallet__received-details-item_blockchain .os-modal-wallet__received-details-item-value {
+  font-weight: 400;
+}
+.os-modal-wallet__received-details-item-more-link-image {
+  display: block;
+  max-width: 100%;
+  width: 111px;
+  height: auto;
+  -webkit-filter: brightness(0) saturate(100%) invert(70%) sepia(78%) saturate(4225%) hue-rotate(56deg) brightness(93%) contrast(98%);
+          filter: brightness(0) saturate(100%) invert(70%) sepia(78%) saturate(4225%) hue-rotate(56deg) brightness(93%) contrast(98%);
+}
 
 .os-body {
   position: fixed;
