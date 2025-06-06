@@ -1010,4 +1010,69 @@
       }
     }
   }
+
+  &__error {
+    &-content {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
+
+    &-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &-image {
+        display: block;
+        max-width: 100%;
+        width: 100px;
+        height: auto;
+      }
+    }
+
+    &-details {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      padding: 16px;
+      border-radius: 12px;
+      background-color: #202022;
+
+      &-message {
+        font-weight: 400;
+        font-size: 14px;
+        color: #fff;
+        text-align: center;
+      }
+
+      &-more {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        padding: 8px;
+        border-radius: 8px;
+        background-color: #ff3030;
+
+        &-title {
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 130%;
+          color: #5e0000;
+        }
+
+        &-link {
+          &-image {
+            display: block;
+            max-width: 100%;
+            width: 111px;
+            height: auto;
+            filter: brightness(0) saturate(100%) invert(7%) sepia(67%) saturate(5766%)
+              hue-rotate(14deg) brightness(96%) contrast(104%);
+          }
+        }
+      }
+    }
+  }
 }

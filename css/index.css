@@ -2746,6 +2746,81 @@ img {
   -webkit-filter: brightness(0) saturate(100%) invert(40%) sepia(81%) saturate(2411%) hue-rotate(202deg) brightness(99%) contrast(93%);
           filter: brightness(0) saturate(100%) invert(40%) sepia(81%) saturate(2411%) hue-rotate(202deg) brightness(99%) contrast(93%);
 }
+.os-modal-wallet__error-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 32px;
+}
+.os-modal-wallet__error-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.os-modal-wallet__error-icon-image {
+  display: block;
+  max-width: 100%;
+  width: 100px;
+  height: auto;
+}
+.os-modal-wallet__error-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 16px;
+  padding: 16px;
+  border-radius: 12px;
+  background-color: #202022;
+}
+.os-modal-wallet__error-details-message {
+  font-weight: 400;
+  font-size: 14px;
+  color: #fff;
+  text-align: center;
+}
+.os-modal-wallet__error-details-more {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 16px;
+  padding: 8px;
+  border-radius: 8px;
+  background-color: #ff3030;
+}
+.os-modal-wallet__error-details-more-title {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 130%;
+  color: #5e0000;
+}
+.os-modal-wallet__error-details-more-link-image {
+  display: block;
+  max-width: 100%;
+  width: 111px;
+  height: auto;
+  -webkit-filter: brightness(0) saturate(100%) invert(7%) sepia(67%) saturate(5766%) hue-rotate(14deg) brightness(96%) contrast(104%);
+          filter: brightness(0) saturate(100%) invert(7%) sepia(67%) saturate(5766%) hue-rotate(14deg) brightness(96%) contrast(104%);
+}
 
 .os-body {
   position: fixed;
