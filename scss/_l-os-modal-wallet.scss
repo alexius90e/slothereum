@@ -1,9 +1,19 @@
 .os-modal-wallet {
+  font-family: 'IBM Plex Sans', sans-serif;
+
   & .os-modal__body {
     position: relative;
     width: 390px;
     height: 726px;
     overflow: hidden;
+
+    @include mobile {
+      max-width: 100dvw;
+      max-height: 100dvh;
+      width: 100%;
+      height: 100%;
+      border-radius: 0;
+    }
   }
 
   & .os-modal__header-title {
@@ -38,6 +48,7 @@
     align-items: flex-start;
     justify-content: center;
     padding: 0 80px;
+    margin: 0 0 32px;
 
     &-title {
       font-family: 'IBM Plex Sans', sans-serif;
@@ -240,6 +251,8 @@
         background-size: 130%;
 
         &-title {
+          position: relative;
+          z-index: 10;
           display: flex;
           gap: 7px;
           margin: 0 0 10px;
@@ -260,6 +273,8 @@
         }
 
         &-subtitle {
+          position: relative;
+          z-index: 10;
           margin: 0 0 8px;
           font-family: 'IBM Plex Sans', sans-serif;
           font-weight: 400;
@@ -270,6 +285,18 @@
 
         &-details {
           position: relative;
+          z-index: 1;
+
+          &::before {
+            content: '';
+            position: absolute;
+            right: 0;
+            bottom: 100%;
+            display: inline-block;
+            width: 193px;
+            height: 130px;
+            background: url(../assets/os/wallet-slo-network.png) right bottom / contain no-repeat;
+          }
 
           &-input {
             display: inline-block;
@@ -490,6 +517,336 @@
         line-height: 120%;
         text-align: center;
         color: #fff;
+      }
+    }
+  }
+
+  &__transaction {
+    &-balance {
+      margin: 0 0 32px;
+
+      &-title {
+        margin: 0 0 4px;
+        font-weight: 500;
+        font-size: 18px;
+        color: #414142;
+        text-align: center;
+      }
+
+      &-value {
+        font-weight: 600;
+        font-size: 44px;
+        color: #fff;
+        text-align: center;
+      }
+
+      &-info {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+        margin: 0 0 32px;
+
+        &-increment {
+          font-weight: 500;
+          font-size: 16px;
+          color: #50af03;
+        }
+
+        &-label {
+          display: inline-block;
+          width: fit-content;
+          padding: 2px 6px;
+          font-weight: 500;
+          font-size: 12px;
+          color: #fff;
+          border-radius: 6px;
+          background: #50af03;
+        }
+      }
+
+      &-buttons {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        &-buy,
+        &-sell,
+        &-send,
+        &-receive {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 6px;
+          flex: 1 1 20%;
+          padding: 16px 8px;
+          box-sizing: border-box;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 98%;
+          color: #5a5a5e;
+          border: none;
+          border-radius: 16px;
+          background-position: center;
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-color: #202022;
+          cursor: pointer;
+
+          &::before {
+            content: '';
+            display: block;
+            width: 28px;
+            aspect-ratio: 1 / 1;
+          }
+        }
+
+        &-buy {
+          &::before {
+            background-image: url(../assets/os/wallet-buy.svg);
+          }
+        }
+
+        &-sell {
+          &::before {
+            background-image: url(../assets/os/wallet-sell.svg);
+          }
+        }
+
+        &-send {
+          &::before {
+            background-image: url(../assets/os/wallet-send.svg);
+          }
+        }
+
+        &-receive {
+          &::before {
+            background-image: url(../assets/os/wallet-receive.svg);
+          }
+        }
+      }
+    }
+
+    &-info {
+      position: relative;
+      display: flex;
+      align-items: stretch;
+      justify-content: flex-start;
+      gap: 20px;
+      min-height: 144px;
+      padding: 20px;
+      margin: 0 0 32px;
+      box-sizing: border-box;
+      overflow: hidden;
+      border-radius: 16px;
+      background: url(../assets/os/gradient-bg.jpg) center no-repeat;
+      background-size: 130%;
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        display: block;
+        width: 144px;
+        background: url(../assets/os/wallet-slo-transaction.png) right bottom / contain no-repeat;
+      }
+
+      &-item {
+        position: relative;
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+
+        &-heading {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-wrap: wrap;
+          gap: 6px;
+
+          &-title {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 98%;
+            color: #fff;
+          }
+
+          &-tag {
+            display: inline-block;
+            flex: 0 0 auto;
+            padding: 4px;
+            font-weight: 700;
+            font-size: 10px;
+            line-height: 98%;
+            color: #fff;
+            border-radius: 6px;
+            text-align: center;
+            background: #50af03;
+          }
+        }
+
+        &-value {
+          flex: 1 1 auto;
+          font-weight: 700;
+          font-size: 16px;
+          line-height: 98%;
+          color: #fff;
+          text-align: center;
+        }
+
+        &-param {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 8px;
+
+          &-name {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 98%;
+            color: #fff;
+            text-align: center;
+          }
+
+          &-value {
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 98%;
+            color: #fff;
+            text-align: center;
+          }
+        }
+      }
+    }
+
+    &-history {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+
+      &-title {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 98%;
+        color: #fff;
+      }
+
+      &-block {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+
+      &-date {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 130%;
+        color: #5a5a5e;
+        text-align: center;
+      }
+
+      &-list {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+
+        &-item {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          padding: 16px;
+          border-radius: 16px;
+          background-color: #202022;
+
+          &::before {
+            content: '';
+            display: block;
+            flex: 0 0 auto;
+            width: 50px;
+            aspect-ratio: 1 / 1;
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+          }
+
+          &_received {
+            &::before {
+              background-image: url(../assets/os/wallet-transaction-recieved.svg);
+            }
+          }
+
+          &_sent {
+            &::before {
+              background-image: url(../assets/os/wallet-transaction-sent.svg);
+            }
+          }
+
+          &_error {
+            &::before {
+              background-image: url(../assets/os/wallet-transaction-error.svg);
+            }
+          }
+
+          &_swap {
+            &::before {
+              background-image: url(../assets/os/wallet-transaction-swap.svg);
+            }
+          }
+
+          &-info {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 2px;
+            flex: 1 1 auto;
+
+            &-status {
+              font-weight: 600;
+              font-size: 14px;
+              color: #fff;
+            }
+
+            &-message {
+              font-weight: 400;
+              font-size: 12px;
+              color: #525257;
+            }
+          }
+
+          &-details {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 2px;
+            flex: 0 0 auto;
+            max-width: 120px;
+
+            &-income {
+              font-weight: 600;
+              font-size: 14px;
+              color: #50af03;
+            }
+
+            &-expenses {
+              font-weight: 600;
+              font-size: 14px;
+              color: #ff3030;
+            }
+          }
+
+          &_sent &-details {
+            &-expenses {
+              color: #327ff3;
+            }
+          }
+        }
       }
     }
   }

@@ -632,6 +632,14 @@ img {
           box-shadow: 2px 2px 0 0 #101010;
   background-color: #1a1a1c;
 }
+@media (max-width: 576px) {
+  .os-modal__body {
+    max-width: 100dvw;
+    max-height: 100dvh;
+    width: 100%;
+    border-radius: 0;
+  }
+}
 .os-modal__header {
   position: relative;
   padding: 13px 40px;
@@ -683,6 +691,14 @@ img {
   width: 390px;
   height: 726px;
   overflow: hidden;
+}
+@media (max-width: 576px) {
+  .os-modal-profile .os-modal__body {
+    max-width: 100dvw;
+    max-height: 100dvh;
+    width: 100%;
+    border-radius: 0;
+  }
 }
 .os-modal-profile .os-modal__header-title {
   display: -webkit-box;
@@ -1604,11 +1620,23 @@ img {
           filter: brightness(20%);
 }
 
+.os-modal-wallet {
+  font-family: "IBM Plex Sans", sans-serif;
+}
 .os-modal-wallet .os-modal__body {
   position: relative;
   width: 390px;
   height: 726px;
   overflow: hidden;
+}
+@media (max-width: 576px) {
+  .os-modal-wallet .os-modal__body {
+    max-width: 100dvw;
+    max-height: 100dvh;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+  }
 }
 .os-modal-wallet .os-modal__header-title {
   display: -webkit-box;
@@ -1652,6 +1680,7 @@ img {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 0 80px;
+  margin: 0 0 32px;
 }
 .os-modal-wallet__heading-title {
   font-family: "IBM Plex Sans", sans-serif;
@@ -1874,6 +1903,8 @@ img {
   background-size: 130%;
 }
 .os-modal-wallet__main-network-contract-title {
+  position: relative;
+  z-index: 10;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1896,6 +1927,8 @@ img {
   background-color: #5ccc00;
 }
 .os-modal-wallet__main-network-contract-subtitle {
+  position: relative;
+  z-index: 10;
   margin: 0 0 8px;
   font-family: "IBM Plex Sans", sans-serif;
   font-weight: 400;
@@ -1905,6 +1938,17 @@ img {
 }
 .os-modal-wallet__main-network-contract-details {
   position: relative;
+  z-index: 1;
+}
+.os-modal-wallet__main-network-contract-details::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 100%;
+  display: inline-block;
+  width: 193px;
+  height: 130px;
+  background: url(../assets/os/wallet-slo-network.png) right bottom/contain no-repeat;
 }
 .os-modal-wallet__main-network-contract-details-input {
   display: inline-block;
@@ -2170,6 +2214,365 @@ img {
   line-height: 120%;
   text-align: center;
   color: #fff;
+}
+.os-modal-wallet__transaction-balance {
+  margin: 0 0 32px;
+}
+.os-modal-wallet__transaction-balance-title {
+  margin: 0 0 4px;
+  font-weight: 500;
+  font-size: 18px;
+  color: #414142;
+  text-align: center;
+}
+.os-modal-wallet__transaction-balance-value {
+  font-weight: 600;
+  font-size: 44px;
+  color: #fff;
+  text-align: center;
+}
+.os-modal-wallet__transaction-balance-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 6px;
+  margin: 0 0 32px;
+}
+.os-modal-wallet__transaction-balance-info-increment {
+  font-weight: 500;
+  font-size: 16px;
+  color: #50af03;
+}
+.os-modal-wallet__transaction-balance-info-label {
+  display: inline-block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 2px 6px;
+  font-weight: 500;
+  font-size: 12px;
+  color: #fff;
+  border-radius: 6px;
+  background: #50af03;
+}
+.os-modal-wallet__transaction-balance-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8px;
+}
+.os-modal-wallet__transaction-balance-buttons-buy, .os-modal-wallet__transaction-balance-buttons-sell, .os-modal-wallet__transaction-balance-buttons-send, .os-modal-wallet__transaction-balance-buttons-receive {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 6px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 20%;
+          flex: 1 1 20%;
+  padding: 16px 8px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 98%;
+  color: #5a5a5e;
+  border: none;
+  border-radius: 16px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: #202022;
+  cursor: pointer;
+}
+.os-modal-wallet__transaction-balance-buttons-buy::before, .os-modal-wallet__transaction-balance-buttons-sell::before, .os-modal-wallet__transaction-balance-buttons-send::before, .os-modal-wallet__transaction-balance-buttons-receive::before {
+  content: "";
+  display: block;
+  width: 28px;
+  aspect-ratio: 1/1;
+}
+.os-modal-wallet__transaction-balance-buttons-buy::before {
+  background-image: url(../assets/os/wallet-buy.svg);
+}
+.os-modal-wallet__transaction-balance-buttons-sell::before {
+  background-image: url(../assets/os/wallet-sell.svg);
+}
+.os-modal-wallet__transaction-balance-buttons-send::before {
+  background-image: url(../assets/os/wallet-send.svg);
+}
+.os-modal-wallet__transaction-balance-buttons-receive::before {
+  background-image: url(../assets/os/wallet-receive.svg);
+}
+.os-modal-wallet__transaction-info {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  gap: 20px;
+  min-height: 144px;
+  padding: 20px;
+  margin: 0 0 32px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow: hidden;
+  border-radius: 16px;
+  background: url(../assets/os/gradient-bg.jpg) center no-repeat;
+  background-size: 130%;
+}
+.os-modal-wallet__transaction-info::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  display: block;
+  width: 144px;
+  background: url(../assets/os/wallet-slo-transaction.png) right bottom/contain no-repeat;
+}
+.os-modal-wallet__transaction-info-item {
+  position: relative;
+  z-index: 10;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8px;
+}
+.os-modal-wallet__transaction-info-item-heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 6px;
+}
+.os-modal-wallet__transaction-info-item-heading-title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 98%;
+  color: #fff;
+}
+.os-modal-wallet__transaction-info-item-heading-tag {
+  display: inline-block;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  padding: 4px;
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 98%;
+  color: #fff;
+  border-radius: 6px;
+  text-align: center;
+  background: #50af03;
+}
+.os-modal-wallet__transaction-info-item-value {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 98%;
+  color: #fff;
+  text-align: center;
+}
+.os-modal-wallet__transaction-info-item-param {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8px;
+}
+.os-modal-wallet__transaction-info-item-param-name {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 98%;
+  color: #fff;
+  text-align: center;
+}
+.os-modal-wallet__transaction-info-item-param-value {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 98%;
+  color: #fff;
+  text-align: center;
+}
+.os-modal-wallet__transaction-history {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 16px;
+}
+.os-modal-wallet__transaction-history-title {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 98%;
+  color: #fff;
+}
+.os-modal-wallet__transaction-history-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 16px;
+}
+.os-modal-wallet__transaction-history-date {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 130%;
+  color: #5a5a5e;
+  text-align: center;
+}
+.os-modal-wallet__transaction-history-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.os-modal-wallet__transaction-history-list-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8px;
+  padding: 16px;
+  border-radius: 16px;
+  background-color: #202022;
+}
+.os-modal-wallet__transaction-history-list-item::before {
+  content: "";
+  display: block;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  width: 50px;
+  aspect-ratio: 1/1;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.os-modal-wallet__transaction-history-list-item_received::before {
+  background-image: url(../assets/os/wallet-transaction-recieved.svg);
+}
+.os-modal-wallet__transaction-history-list-item_sent::before {
+  background-image: url(../assets/os/wallet-transaction-sent.svg);
+}
+.os-modal-wallet__transaction-history-list-item_error::before {
+  background-image: url(../assets/os/wallet-transaction-error.svg);
+}
+.os-modal-wallet__transaction-history-list-item_swap::before {
+  background-image: url(../assets/os/wallet-transaction-swap.svg);
+}
+.os-modal-wallet__transaction-history-list-item-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 2px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+.os-modal-wallet__transaction-history-list-item-info-status {
+  font-weight: 600;
+  font-size: 14px;
+  color: #fff;
+}
+.os-modal-wallet__transaction-history-list-item-info-message {
+  font-weight: 400;
+  font-size: 12px;
+  color: #525257;
+}
+.os-modal-wallet__transaction-history-list-item-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  gap: 2px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  max-width: 120px;
+}
+.os-modal-wallet__transaction-history-list-item-details-income {
+  font-weight: 600;
+  font-size: 14px;
+  color: #50af03;
+}
+.os-modal-wallet__transaction-history-list-item-details-expenses {
+  font-weight: 600;
+  font-size: 14px;
+  color: #ff3030;
+}
+.os-modal-wallet__transaction-history-list-item_sent .os-modal-wallet__transaction-history-list-item-details-expenses {
+  color: #327ff3;
 }
 
 .os-body {
