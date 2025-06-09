@@ -891,7 +891,7 @@
             </div>
           </div>
 
-          <div class="os-modal os-modal-wallet" data-modal="wallet">
+          <div class="os-modal os-modal-wallet hidden" data-modal="wallet">
             <div class="os-modal__body">
               <div class="os-modal__header">
                 <div class="os-modal__header-title">Wallet</div>
@@ -2256,7 +2256,7 @@
             </div>
           </div>
 
-          <div class="os-modal os-modal-swap hidden" data-modal="swap">
+          <div class="os-modal os-modal-swap" data-modal="swap">
             <div class="os-modal__body">
               <div class="os-modal__header">
                 <div class="os-modal__header-title">Swap</div>
@@ -2265,7 +2265,7 @@
 
               <div class="os-modal__wrapper">
                 <div class="os-modal__content">
-                  <div class="os-modal-swap__main">
+                  <div class="os-modal-swap__main hidden">
                     <div class="os-modal-swap__main-details">
                       <div class="os-modal-swap__main-details-title">Contract addres</div>
 
@@ -2366,7 +2366,7 @@
                     </div>
                   </div>
 
-                  <div class="os-modal-swap__main hidden">
+                  <div class="os-modal-swap__main">
                     <div class="os-modal-swap__main-details">
                       <div class="os-modal-swap__main-details-title">Contract addres</div>
 
@@ -2471,6 +2471,119 @@
             </div>
           </div>
 
+          <div class="os-modal os-modal-sent hidden" data-modal="sent">
+            <div class="os-modal__body">
+              <div class="os-modal__header">
+                <div class="os-modal__header-title">Sent</div>
+                <div class="os-modal__header-close"></div>
+              </div>
+
+              <div class="os-modal__wrapper">
+                <div class="os-modal__content">
+                  <div class="os-modal-sent__main hidden">
+                    <div class="os-modal-sent__main-sent">
+                      <div class="os-modal-sent__main-sent-item">
+                        <div class="os-modal-sent__main-sent-item-title">Balance: 0</div>
+
+                        <div class="os-modal-sent__main-sent-item-control">
+                          <input
+                            class="os-modal-sent__main-sent-item-control-input"
+                            type="text"
+                            value="0"
+                          />
+                          <div class="os-modal-sent__main-sent-item-control-label">
+                            <figure class="os-modal-sent__main-sent-item-control-label-icon">
+                              <img
+                                class="os-modal-sent__main-sent-item-control-label-icon-image"
+                                src="./assets/os/ethereum-eth-1.svg"
+                                alt="ethereum"
+                              />
+                            </figure>
+                            <div class="os-modal-sent__main-sent-item-control-label-name">ETH</div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="os-modal-sent__main-sent-quantity">
+                        <button class="os-modal-sent__main-sent-quantity-button">10%</button>
+                        <button class="os-modal-sent__main-sent-quantity-button">25%</button>
+                        <button class="os-modal-sent__main-sent-quantity-button">50%</button>
+                        <button class="os-modal-sent__main-sent-quantity-button">MAX</button>
+                      </div>
+
+                      <div class="os-modal-sent__main-sent-direction"></div>
+
+                      <div class="os-modal-sent__main-sent-item">
+                        <div class="os-modal-sent__main-sent-item-title">To whom</div>
+                        <div class="os-modal-sent__main-sent-whom">
+                          <input
+                            class="os-modal-sent__main-sent-whom-input"
+                            type="text"
+                            value="0xdAC17F958D2ee523a2206206994597C13D831ec7"
+                          />
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="os-modal-sent__main-continue">
+                      <button class="os-modal-sent__main-continue-button" disabled>Continue</button>
+                    </div>
+                  </div>
+
+                  <div class="os-modal-sent__main">
+                    <div class="os-modal-sent__main-sent">
+                      <div class="os-modal-sent__main-sent-item">
+                        <div class="os-modal-sent__main-sent-item-title">Balance: 0</div>
+
+                        <div class="os-modal-sent__main-sent-item-control">
+                          <input
+                            class="os-modal-sent__main-sent-item-control-input"
+                            type="text"
+                            value="0"
+                          />
+                          <div class="os-modal-sent__main-sent-item-control-label">
+                            <figure class="os-modal-sent__main-sent-item-control-label-icon">
+                              <img
+                                class="os-modal-sent__main-sent-item-control-label-icon-image"
+                                src="./assets/os/ethereum-eth-1.svg"
+                                alt="ethereum"
+                              />
+                            </figure>
+                            <div class="os-modal-sent__main-sent-item-control-label-name">ETH</div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="os-modal-sent__main-sent-quantity">
+                        <button class="os-modal-sent__main-sent-quantity-button">10%</button>
+                        <button class="os-modal-sent__main-sent-quantity-button">25%</button>
+                        <button class="os-modal-sent__main-sent-quantity-button">50%</button>
+                        <button class="os-modal-sent__main-sent-quantity-button">MAX</button>
+                      </div>
+
+                      <div class="os-modal-sent__main-sent-direction"></div>
+
+                      <div class="os-modal-sent__main-sent-item">
+                        <div class="os-modal-sent__main-sent-item-title">To whom</div>
+                        <div class="os-modal-sent__main-sent-whom">
+                          <input
+                            class="os-modal-sent__main-sent-whom-input"
+                            type="text"
+                            value="0xdAC17F958D2ee523a2206206994597C13D831ec7"
+                          />
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="os-modal-sent__main-continue">
+                      <button class="os-modal-sent__main-continue-button">Continue</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <div class="os-modal os-modal-confirmation hidden" data-modal="confirmation">
             <div class="os-modal__body">
               <div class="os-modal__header">
@@ -2480,70 +2593,72 @@
 
               <div class="os-modal__wrapper">
                 <div class="os-modal__content">
-                  <div class="os-modal-confirmation__main">
-                      <div class="os-modal-confirmation__main-details">
-                        <div
-                          class="os-modal-confirmation__main-details-item os-modal-confirmation__main-details-item_sell"
-                        >
-                          <div class="os-modal-confirmation__main-details-item-name">You sell:</div>
-                          <div class="os-modal-confirmation__main-details-item-value">
-                            4 200 $SOL
-                          </div>
-                        </div>
+                  <div class="os-modal-confirmation__swap">
+                    <div class="os-modal-confirmation__swap-details">
+                      <div
+                        class="os-modal-confirmation__swap-details-item os-modal-confirmation__swap-details-item_sell"
+                      >
+                        <div class="os-modal-confirmation__swap-details-item-name">You sell:</div>
+                        <div class="os-modal-confirmation__swap-details-item-value">4 200 $SOL</div>
+                      </div>
 
-                        <div
-                          class="os-modal-confirmation__main-details-item os-modal-confirmation__main-details-item_get"
-                        >
-                          <div class="os-modal-confirmation__main-details-item-name">Get:</div>
-                          <div class="os-modal-confirmation__main-details-item-value">12 $ETH</div>
-                        </div>
+                      <div
+                        class="os-modal-confirmation__swap-details-item os-modal-confirmation__swap-details-item_get"
+                      >
+                        <div class="os-modal-confirmation__swap-details-item-name">Get:</div>
+                        <div class="os-modal-confirmation__swap-details-item-value">12 $ETH</div>
+                      </div>
 
-                        <div
-                          class="os-modal-confirmation__main-details-item os-modal-confirmation__main-details-item_commission"
-                        >
-                          <div class="os-modal-confirmation__main-details-item-name">Commission:</div>
-                          <div class="os-modal-confirmation__main-details-item-value">0.1 ETH</div>
+                      <div
+                        class="os-modal-confirmation__swap-details-item os-modal-confirmation__swap-details-item_commission"
+                      >
+                        <div class="os-modal-confirmation__swap-details-item-name">Commission:</div>
+                        <div class="os-modal-confirmation__swap-details-item-value">0.1 ETH</div>
+                      </div>
+                    </div>
+
+                    <div class="os-modal-confirmation__swap-details">
+                      <div
+                        class="os-modal-confirmation__swap-details-item os-modal-confirmation__swap-details-item_price"
+                      >
+                        <div class="os-modal-confirmation__swap-details-item-name">
+                          Token price:
+                        </div>
+                        <div class="os-modal-confirmation__swap-details-item-value">
+                          0.0₈210 ETH
                         </div>
                       </div>
 
-                      <div class="os-modal-confirmation__main-details">
-                        <div
-                          class="os-modal-confirmation__main-details-item os-modal-confirmation__main-details-item_price"
-                        >
-                          <div class="os-modal-confirmation__main-details-item-name">Token price:</div>
-                          <div class="os-modal-confirmation__main-details-item-value">
-                            0.0₈210 ETH
-                          </div>
-                        </div>
+                      <div
+                        class="os-modal-confirmation__swap-details-item os-modal-confirmation__swap-details-item_liquidity"
+                      >
+                        <div class="os-modal-confirmation__swap-details-item-name">Liquidity:</div>
+                        <div class="os-modal-confirmation__swap-details-item-value">$ 32k</div>
+                      </div>
 
-                        <div
-                          class="os-modal-confirmation__main-details-item os-modal-confirmation__main-details-item_liquidity"
-                        >
-                          <div class="os-modal-confirmation__main-details-item-name">Liquidity:</div>
-                          <div class="os-modal-confirmation__main-details-item-value">$ 32k</div>
+                      <div
+                        class="os-modal-confirmation__swap-details-item os-modal-confirmation__swap-details-item_address"
+                      >
+                        <div class="os-modal-confirmation__swap-details-item-name">
+                          Contract address:
                         </div>
-
-                        <div
-                          class="os-modal-confirmation__main-details-item os-modal-confirmation__main-details-item_address"
-                        >
-                          <div class="os-modal-confirmation__main-details-item-name">Contract address:</div>
-                          <div class="os-modal-confirmation__main-details-item-value">
-                            2zMMhcVQEXDt...gnBouauv
-                          </div>
-                        </div>
-
-                        <div
-                          class="os-modal-confirmation__main-details-item os-modal-confirmation__main-details-item_blockchain"
-                        >
-                          <div class="os-modal-confirmation__main-details-item-name">Blockchain:</div>
-                          <div class="os-modal-confirmation__main-details-item-value">ETH</div>
+                        <div class="os-modal-confirmation__swap-details-item-value">
+                          2zMMhcVQEXDt...gnBouauv
                         </div>
                       </div>
 
-                      <div class="os-modal-confirmation__main-buttons">
-                        <button class="os-modal-confirmation__main-buttons-confirm">Confirm</button>
-                        <button class="os-modal-confirmation__main-buttons-back">Back</button>
+                      <div
+                        class="os-modal-confirmation__swap-details-item os-modal-confirmation__swap-details-item_blockchain"
+                      >
+                        <div class="os-modal-confirmation__swap-details-item-name">Blockchain:</div>
+                        <div class="os-modal-confirmation__swap-details-item-value">ETH</div>
                       </div>
+                    </div>
+
+                    <div class="os-modal-confirmation__swap-buttons">
+                      <button class="os-modal-confirmation__swap-buttons-confirm">Confirm</button>
+                      <button class="os-modal-confirmation__swap-buttons-back">Back</button>
+                    </div>
                   </div>
                 </div>
               </div>

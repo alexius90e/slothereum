@@ -1,4 +1,4 @@
-.os-modal-swap {
+.os-modal-sent {
   font-family: 'IBM Plex Sans', sans-serif;
 
   & .os-modal__body {
@@ -48,57 +48,9 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+    min-height: 100%;
 
-    &-details {
-      &-title {
-        margin: 0 0 10px;
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 98%;
-        color: #fff;
-      }
-
-      &-wrapper {
-        position: relative;
-        z-index: 1;
-      }
-
-      &-input {
-        display: inline-block;
-        width: 100%;
-        padding: 15px 16px;
-        padding-right: 80px;
-        box-sizing: border-box;
-        font-family: 'IBM Plex Sans', sans-serif;
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 98%;
-        color: #d5d5d5;
-        border: 1px solid #3a3a3d;
-        border-radius: 14px;
-        background-color: #17171a;
-      }
-
-      &-paste {
-        position: absolute;
-        top: 50%;
-        right: 10px;
-        display: inline-block;
-        padding: 8px 6px;
-        font-family: 'IBM Plex Sans', sans-serif;
-        font-weight: 500;
-        font-size: 14px;
-        line-height: 98%;
-        color: #d1d1d1;
-        border: none;
-        border-radius: 8px;
-        background-color: #3a3a3d;
-        transform: translateY(-50%);
-        cursor: pointer;
-      }
-    }
-
-    &-swap {
+    &-sent {
       position: relative;
       display: flex;
       flex-direction: column;
@@ -178,7 +130,7 @@
         }
       }
 
-      &-reverse {
+      &-direction {
         position: relative;
         display: flex;
         align-items: center;
@@ -196,16 +148,16 @@
           background-color: #28282b;
         }
 
-        &-button {
+        &::after {
+          content: '';
           position: relative;
           z-index: 10;
-          display: inline-block;
+          display: block;
           width: 32px;
           height: 32px;
-          padding: 0;
           border: none;
           border-radius: 150px;
-          background: url(../assets/os/arrow-down-up.svg) center / 24px no-repeat;
+          background: url(../assets/os/arrow-down.svg) center / 24px no-repeat;
           background-color: #28282b;
           cursor: pointer;
         }
@@ -233,104 +185,29 @@
           cursor: pointer;
         }
       }
-    }
 
-    &-info {
-      position: relative;
-      display: flex;
-      align-items: stretch;
-      justify-content: flex-start;
-      gap: 20px;
-      min-height: 144px;
-      padding: 20px;
-      box-sizing: border-box;
-      overflow: hidden;
-      border-radius: 16px;
-      background: url(../assets/os/gradient-bg.jpg) center no-repeat;
-      background-size: 130%;
-
-      &::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        right: 0;
-        display: block;
-        width: 144px;
-        background: url(../assets/os/wallet-slo-transaction.png) right bottom / contain no-repeat;
-      }
-
-      &-item {
-        position: relative;
-        z-index: 10;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 8px;
-
-        &-heading {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          flex-wrap: wrap;
-          gap: 6px;
-
-          &-title {
-            font-weight: 500;
-            font-size: 16px;
-            line-height: 98%;
-            color: #fff;
-          }
-
-          &-tag {
-            display: inline-block;
-            flex: 0 0 auto;
-            padding: 4px;
-            font-weight: 700;
-            font-size: 10px;
-            line-height: 98%;
-            color: #fff;
-            border-radius: 6px;
-            text-align: center;
-            background: #50af03;
-          }
-        }
-
-        &-value {
-          flex: 1 1 auto;
-          font-weight: 700;
-          font-size: 16px;
-          line-height: 98%;
+      &-whom {
+        &-input {
+          display: inline-block;
+          width: 100%;
+          padding: 26px 20px;
+          box-sizing: border-box;
+          font-weight: 500;
+          font-size: 11px;
           color: #fff;
-          text-align: center;
-        }
-
-        &-param {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          gap: 8px;
-
-          &-name {
-            font-weight: 500;
-            font-size: 16px;
-            line-height: 98%;
-            color: #fff;
-            text-align: center;
-          }
-
-          &-value {
-            font-weight: 700;
-            font-size: 16px;
-            line-height: 98%;
-            color: #fff;
-            text-align: center;
-          }
+          border: none;
+          border-radius: 16px;
+          outline: none;
+          background-color: #131314;
         }
       }
     }
 
     &-continue {
+      display: flex;
+      align-items: flex-end;
+      flex: 1 1 auto;
+
       &-button {
         display: inline-block;
         width: 100%;
