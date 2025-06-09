@@ -10,6 +10,9 @@ const osSections = {
   osModal: 'os-modal',
   osModalProfile: 'os-modal-profile',
   osModalWallet: 'os-modal-wallet',
+  osModalSwap: 'os-modal-swap',
+  osModalSent: 'os-modal-sent',
+  osModalConfirmation: 'os-modal-confirmation',
 };
 
 const showOsSection = (sectionClassName) => {
@@ -468,6 +471,133 @@ profilePages.forEach((profilePage) => {
 });
 
 /// wallet
+
+const walletModalEl = document.querySelector(`.${osSections.osModalWallet}`);
+
+if (walletModalEl) {
+  walletModalEl.addEventListener('click', (event) => {
+    const isReceiveButton = event.target.classList.contains(
+      'os-modal-wallet__main-info-controls-receive'
+    );
+    const isSentButton = event.target.classList.contains(
+      'os-modal-wallet__main-info-controls-send'
+    );
+    const isPasteButton = event.target.classList.contains(
+      'os-modal-wallet__main-network-contract-details-paste'
+    );
+    const isAddressBackButton = event.target.classList.contains(
+      'os-modal-wallet__address-back-button'
+    );
+    const isCopyButton = event.target.classList.contains('os-modal-wallet__main-info-token-copy');
+
+    if (isSentButton) {
+      hideOsSection(osSections.osModalWallet);
+      showOsSection(osSections.osModalSent);
+    }
+
+    if (isPasteButton) {
+      hideOsSection(osSections.osModalWallet);
+      showOsSection(osSections.osModalSwap);
+    }
+
+    if (isReceiveButton) {
+      const addressEl = walletModalEl.querySelector('.os-modal-wallet__address');
+
+      if (addressEl) {
+        const walletContentEls = walletModalEl.querySelectorAll('.os-modal__content > *');
+        walletContentEls.forEach((el) => el.classList.add('hidden'));
+        addressEl.classList.remove('hidden');
+      }
+    }
+
+    if (isAddressBackButton) {
+      const mainEl = walletModalEl.querySelector('.os-modal-wallet__main');
+
+      if (mainEl) {
+        const walletContentEls = walletModalEl.querySelectorAll('.os-modal__content > *');
+        walletContentEls.forEach((el) => el.classList.add('hidden'));
+        mainEl.classList.remove('hidden');
+      }
+    }
+
+    if (isCopyButton) {
+      const tokenCodeEl = walletModalEl.querySelector('.os-modal-wallet__main-info-token-code');
+
+      if (tokenCodeEl) {
+        navigator.clipboard.writeText(tokenCodeEl.dataset.token || '');
+      }
+    }
+  });
+}
+
+const sentModalEl = document.querySelector(`.${osSections.osModalSent}`);
+const swapModalEl = document.querySelector(`.${osSections.osModalSwap}`);
+const confirmationModalEl = document.querySelector(`.${osSections.osModalConfirmation}`);
+
+if (sentModalEl) {
+  sentModalEl.addEventListener('click', (event) => {
+    const isContinueButton = event.target.classList.contains('os-modal-sent__main-continue-button');
+
+    if (isContinueButton) {
+      hideOsSection(osSections.osModalSent);
+      showOsSection(osSections.osModalConfirmation);
+
+      if (confirmationModalEl) {
+        const confirmationContentEls =
+          confirmationModalEl.querySelectorAll('.os-modal__content > *');
+        confirmationContentEls.forEach((el) => el.classList.add('hidden'));
+        const sentConfirmationEl = confirmationModalEl.querySelector(
+          '.os-modal-confirmation__sent'
+        );
+
+        if (sentConfirmationEl) sentConfirmationEl.classList.remove('hidden');
+      }
+    }
+  });
+}
+
+if (swapModalEl) {
+  swapModalEl.addEventListener('click', (event) => {
+    const isContinueButton = event.target.classList.contains('os-modal-swap__main-continue-button');
+
+    if (isContinueButton) {
+      hideOsSection(osSections.osModalSwap);
+      showOsSection(osSections.osModalConfirmation);
+
+      if (confirmationModalEl) {
+        const confirmationContentEls =
+          confirmationModalEl.querySelectorAll('.os-modal__content > *');
+        confirmationContentEls.forEach((el) => el.classList.add('hidden'));
+        const swapConfirmationEl = confirmationModalEl.querySelector(
+          '.os-modal-confirmation__swap'
+        );
+
+        if (swapConfirmationEl) swapConfirmationEl.classList.remove('hidden');
+      }
+    }
+  });
+}
+
+if (confirmationModalEl) {
+  confirmationModalEl.addEventListener('click', (event) => {
+    const isSentBackButton = event.target.classList.contains(
+      'os-modal-confirmation__sent-buttons-back'
+    );
+    const isSwapBackButton = event.target.classList.contains(
+      'os-modal-confirmation__swap-buttons-back'
+    );
+
+    if (isSentBackButton) {
+      hideOsSection(osSections.osModalConfirmation);
+      showOsSection(osSections.osModalSent);
+    }
+
+    if (isSwapBackButton) {
+      hideOsSection(osSections.osModalConfirmation);
+      showOsSection(osSections.osModalSwap);
+    }
+  });
+}
 
 const osWalletHiddenEls = document.querySelectorAll('.os-modal-wallet__main-network-tokens-hidden');
 

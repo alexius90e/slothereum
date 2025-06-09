@@ -891,21 +891,29 @@
             </div>
           </div>
 
-          <div class="os-modal os-modal-wallet hidden" data-modal="wallet">
+          <div class="os-modal os-modal-wallet " data-modal="wallet">
             <div class="os-modal__body">
               <div class="os-modal__header">
                 <div class="os-modal__header-title">Wallet</div>
                 <div class="os-modal__header-close"></div>
               </div>
 
+              <div class="os-modal-wallet__loading hidden">
+                <img
+                  class="os-modal-wallet__loading-image"
+                  src="./assets/os/wallet-loading.jpg"
+                  alt="wallet"
+                />
+              </div>
+
               <div class="os-modal__wrapper">
                 <div class="os-modal__content">
-                  <div class="os-modal-wallet__main">
+                  <div class="os-modal-wallet__main ">
                     <div class="os-modal-wallet__main-info">
                       <div class="os-modal-wallet__main-info-name">CustomName #1</div>
 
                       <div class="os-modal-wallet__main-info-token">
-                        <div class="os-modal-wallet__main-info-token-code">0xe27e ··· c886</div>
+                        <div class="os-modal-wallet__main-info-token-code" data-token="0xe27e ··· c886">0xe27e ··· c886</div>
                         <button class="os-modal-wallet__main-info-token-copy"></button>
                       </div>
 
@@ -2256,7 +2264,7 @@
             </div>
           </div>
 
-          <div class="os-modal os-modal-swap" data-modal="swap">
+          <div class="os-modal os-modal-swap hidden" data-modal="swap">
             <div class="os-modal__body">
               <div class="os-modal__header">
                 <div class="os-modal__header-title">Swap</div>
@@ -2471,7 +2479,7 @@
             </div>
           </div>
 
-          <div class="os-modal os-modal-sent hidden" data-modal="sent">
+          <div class="os-modal os-modal-sent hidden " data-modal="sent">
             <div class="os-modal__body">
               <div class="os-modal__header">
                 <div class="os-modal__header-title">Sent</div>
@@ -2593,7 +2601,7 @@
 
               <div class="os-modal__wrapper">
                 <div class="os-modal__content">
-                  <div class="os-modal-confirmation__swap">
+                  <div class="os-modal-confirmation__swap hidden">
                     <div class="os-modal-confirmation__swap-details">
                       <div
                         class="os-modal-confirmation__swap-details-item os-modal-confirmation__swap-details-item_sell"
@@ -2658,6 +2666,40 @@
                     <div class="os-modal-confirmation__swap-buttons">
                       <button class="os-modal-confirmation__swap-buttons-confirm">Confirm</button>
                       <button class="os-modal-confirmation__swap-buttons-back">Back</button>
+                    </div>
+                  </div>
+
+                  <div class="os-modal-confirmation__sent hidden">
+                    <div class="os-modal-confirmation__sent-details">
+                      <div
+                        class="os-modal-confirmation__sent-details-item os-modal-confirmation__sent-details-item_sent"
+                      >
+                        <div class="os-modal-confirmation__sent-details-item-name">You will send:</div>
+                        <div class="os-modal-confirmation__sent-details-item-value">12 $ETH</div>
+                      </div>
+
+                      <div
+                        class="os-modal-confirmation__sent-details-item os-modal-confirmation__sent-details-item_commission"
+                      >
+                        <div class="os-modal-confirmation__sent-details-item-name">Commission:</div>
+                        <div class="os-modal-confirmation__sent-details-item-value">0.1 ETH</div>
+                      </div>
+
+                      <div
+                        class="os-modal-confirmation__sent-details-item os-modal-confirmation__sent-details-item_whom"
+                      >
+                        <div class="os-modal-confirmation__sent-details-item-name">
+                          To whom:
+                        </div>
+                        <div class="os-modal-confirmation__sent-details-item-value">
+                          2zMMhcVQEXDt...gnBouauv
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="os-modal-confirmation__sent-buttons">
+                      <button class="os-modal-confirmation__sent-buttons-confirm">Confirm</button>
+                      <button class="os-modal-confirmation__sent-buttons-back">Back</button>
                     </div>
                   </div>
                 </div>

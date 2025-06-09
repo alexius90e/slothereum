@@ -163,4 +163,102 @@
       }
     }
   }
+
+  &__sent {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    min-height: 100%;
+
+    &-details {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      padding: 16px;
+      border-radius: 12px;
+      background-color: #202022;
+
+      &-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        padding-bottom: 8px;
+        border-bottom: 1px solid #2b2b2f;
+
+        &:last-child {
+          padding-bottom: 0;
+          border-bottom: none;
+        }
+
+        &-name {
+          flex: 0 0 auto;
+          font-weight: 400;
+          font-size: 14px;
+          color: #fff;
+        }
+
+        &-value {
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 98%;
+          color: #fff;
+          text-align: right;
+        }
+
+        &_sent &-value {
+          display: flex;
+          align-items: center;
+          gap: 4px;
+          padding: 4px 6px;
+          border-radius: 6px;
+          background-color: #2e3033;
+
+          &::after {
+            content: '';
+            display: inline-block;
+            flex: 0 0 auto;
+            width: 10px;
+            aspect-ratio: 1 / 1;
+            background: url(../assets/os/confirmation-sell.svg) center / contain no-repeat;
+          }
+        }
+
+        &_whom &-value {
+          word-break: break-all;
+        }
+      }
+    }
+
+    &-buttons {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      flex: 1 1 auto;
+      gap: 16px;
+
+      &-confirm,
+      &-back {
+        display: inline-block;
+        width: 100%;
+        padding: 17px 32px;
+        box-sizing: border-box;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 98%;
+        color: #fff;
+        border: none;
+        border-radius: 12px;
+        cursor: pointer;
+      }
+
+      &-confirm {
+        background-color: #106af3;
+      }
+
+      &-back {
+        background-color: #3a3a3d;
+      }
+    }
+  }
 }
