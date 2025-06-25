@@ -318,7 +318,18 @@ osMainApps.forEach((osMainApp) => {
     const targetModalName = event.currentTarget.dataset.target;
 
     if (targetModalName === osMainAppsTargets.profile) showOsSection(osSections.osModalProfile);
-    if (targetModalName === osMainAppsTargets.wallet) showOsSection(osSections.osModalWallet);
+    if (targetModalName === osMainAppsTargets.wallet) {
+      showOsSection(osSections.osModalWallet);
+      const walletLoadingEl = document.querySelector('.os-modal-wallet__loading');
+
+      if (walletLoadingEl) {
+        walletLoadingEl.classList.remove('hidden');
+
+        setTimeout(() => {
+          walletLoadingEl.classList.add('hidden');
+        }, 1500);
+      }
+    }
   });
 });
 
